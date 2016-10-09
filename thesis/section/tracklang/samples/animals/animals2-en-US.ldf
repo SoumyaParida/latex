@@ -1,0 +1,10 @@
+\ProvidesAnimalsLang{en-US}
+
+\RequireAnimalsLang{english}%
+
+\providecommand*{\englishUSanimals}{%
+  \englishanimals
+  \renewcommand*{\ladybirdname}{ladybug}%
+}
+
+\englishUSanimals

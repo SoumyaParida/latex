@@ -1,0 +1,895 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.10.5)  8 OCT 2016 18:23
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**main.tex
+(./main.tex
+LaTeX2e <2016/02/01>
+Babel <3.9q> and hyphenation patterns for 5 language(s) loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 95.
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count87
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2016/02/24 3.9q The Babel package
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2012/08/20 v3.3p English support from the babel system
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2016/02/24 3.9q Babel common definitions
+\babel@savecnt=\count88
+\U@D=\dimen105
+)
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+))
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2015/03/17 v1.2c Input encoding file
+\inpenc@prehook=\toks15
+\inpenc@posthook=\toks16
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2015/12/03 v1.1r UTF-8 support for inputenc
+Now handling font encoding OML ...
+... no UTF-8 mapping file for font encoding OML
+Now handling font encoding T1 ...
+... processing UTF-8 mapping file for font encoding T1
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu
+File: t1enc.dfu 2015/12/03 v1.1r UTF-8 support for inputenc
+   defining Unicode char U+00A0 (decimal 160)
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00AD (decimal 173)
+   defining Unicode char U+00BB (decimal 187)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C0 (decimal 192)
+   defining Unicode char U+00C1 (decimal 193)
+   defining Unicode char U+00C2 (decimal 194)
+   defining Unicode char U+00C3 (decimal 195)
+   defining Unicode char U+00C4 (decimal 196)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00C7 (decimal 199)
+   defining Unicode char U+00C8 (decimal 200)
+   defining Unicode char U+00C9 (decimal 201)
+   defining Unicode char U+00CA (decimal 202)
+   defining Unicode char U+00CB (decimal 203)
+   defining Unicode char U+00CC (decimal 204)
+   defining Unicode char U+00CD (decimal 205)
+   defining Unicode char U+00CE (decimal 206)
+   defining Unicode char U+00CF (decimal 207)
+   defining Unicode char U+00D0 (decimal 208)
+   defining Unicode char U+00D1 (decimal 209)
+   defining Unicode char U+00D2 (decimal 210)
+   defining Unicode char U+00D3 (decimal 211)
+   defining Unicode char U+00D4 (decimal 212)
+   defining Unicode char U+00D5 (decimal 213)
+   defining Unicode char U+00D6 (decimal 214)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00D9 (decimal 217)
+   defining Unicode char U+00DA (decimal 218)
+   defining Unicode char U+00DB (decimal 219)
+   defining Unicode char U+00DC (decimal 220)
+   defining Unicode char U+00DD (decimal 221)
+   defining Unicode char U+00DE (decimal 222)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E0 (decimal 224)
+   defining Unicode char U+00E1 (decimal 225)
+   defining Unicode char U+00E2 (decimal 226)
+   defining Unicode char U+00E3 (decimal 227)
+   defining Unicode char U+00E4 (decimal 228)
+   defining Unicode char U+00E5 (decimal 229)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00E7 (decimal 231)
+   defining Unicode char U+00E8 (decimal 232)
+   defining Unicode char U+00E9 (decimal 233)
+   defining Unicode char U+00EA (decimal 234)
+   defining Unicode char U+00EB (decimal 235)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F0 (decimal 240)
+   defining Unicode char U+00F1 (decimal 241)
+   defining Unicode char U+00F2 (decimal 242)
+   defining Unicode char U+00F3 (decimal 243)
+   defining Unicode char U+00F4 (decimal 244)
+   defining Unicode char U+00F5 (decimal 245)
+   defining Unicode char U+00F6 (decimal 246)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+00F9 (decimal 249)
+   defining Unicode char U+00FA (decimal 250)
+   defining Unicode char U+00FB (decimal 251)
+   defining Unicode char U+00FC (decimal 252)
+   defining Unicode char U+00FD (decimal 253)
+   defining Unicode char U+00FE (decimal 254)
+   defining Unicode char U+00FF (decimal 255)
+   defining Unicode char U+0100 (decimal 256)
+   defining Unicode char U+0101 (decimal 257)
+   defining Unicode char U+0102 (decimal 258)
+   defining Unicode char U+0103 (decimal 259)
+   defining Unicode char U+0104 (decimal 260)
+   defining Unicode char U+0105 (decimal 261)
+   defining Unicode char U+0106 (decimal 262)
+   defining Unicode char U+0107 (decimal 263)
+   defining Unicode char U+0108 (decimal 264)
+   defining Unicode char U+0109 (decimal 265)
+   defining Unicode char U+010A (decimal 266)
+   defining Unicode char U+010B (decimal 267)
+   defining Unicode char U+010C (decimal 268)
+   defining Unicode char U+010D (decimal 269)
+   defining Unicode char U+010E (decimal 270)
+   defining Unicode char U+010F (decimal 271)
+   defining Unicode char U+0110 (decimal 272)
+   defining Unicode char U+0111 (decimal 273)
+   defining Unicode char U+0112 (decimal 274)
+   defining Unicode char U+0113 (decimal 275)
+   defining Unicode char U+0114 (decimal 276)
+   defining Unicode char U+0115 (decimal 277)
+   defining Unicode char U+0116 (decimal 278)
+   defining Unicode char U+0117 (decimal 279)
+   defining Unicode char U+0118 (decimal 280)
+   defining Unicode char U+0119 (decimal 281)
+   defining Unicode char U+011A (decimal 282)
+   defining Unicode char U+011B (decimal 283)
+   defining Unicode char U+011C (decimal 284)
+   defining Unicode char U+011D (decimal 285)
+   defining Unicode char U+011E (decimal 286)
+   defining Unicode char U+011F (decimal 287)
+   defining Unicode char U+0120 (decimal 288)
+   defining Unicode char U+0121 (decimal 289)
+   defining Unicode char U+0122 (decimal 290)
+   defining Unicode char U+0123 (decimal 291)
+   defining Unicode char U+0124 (decimal 292)
+   defining Unicode char U+0125 (decimal 293)
+   defining Unicode char U+0128 (decimal 296)
+   defining Unicode char U+0129 (decimal 297)
+   defining Unicode char U+012A (decimal 298)
+   defining Unicode char U+012B (decimal 299)
+   defining Unicode char U+012C (decimal 300)
+   defining Unicode char U+012D (decimal 301)
+   defining Unicode char U+012E (decimal 302)
+   defining Unicode char U+012F (decimal 303)
+   defining Unicode char U+0130 (decimal 304)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0132 (decimal 306)
+   defining Unicode char U+0133 (decimal 307)
+   defining Unicode char U+0134 (decimal 308)
+   defining Unicode char U+0135 (decimal 309)
+   defining Unicode char U+0136 (decimal 310)
+   defining Unicode char U+0137 (decimal 311)
+   defining Unicode char U+0139 (decimal 313)
+   defining Unicode char U+013A (decimal 314)
+   defining Unicode char U+013B (decimal 315)
+   defining Unicode char U+013C (decimal 316)
+   defining Unicode char U+013D (decimal 317)
+   defining Unicode char U+013E (decimal 318)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0143 (decimal 323)
+   defining Unicode char U+0144 (decimal 324)
+   defining Unicode char U+0145 (decimal 325)
+   defining Unicode char U+0146 (decimal 326)
+   defining Unicode char U+0147 (decimal 327)
+   defining Unicode char U+0148 (decimal 328)
+   defining Unicode char U+014A (decimal 330)
+   defining Unicode char U+014B (decimal 331)
+   defining Unicode char U+014C (decimal 332)
+   defining Unicode char U+014D (decimal 333)
+   defining Unicode char U+014E (decimal 334)
+   defining Unicode char U+014F (decimal 335)
+   defining Unicode char U+0150 (decimal 336)
+   defining Unicode char U+0151 (decimal 337)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0154 (decimal 340)
+   defining Unicode char U+0155 (decimal 341)
+   defining Unicode char U+0156 (decimal 342)
+   defining Unicode char U+0157 (decimal 343)
+   defining Unicode char U+0158 (decimal 344)
+   defining Unicode char U+0159 (decimal 345)
+   defining Unicode char U+015A (decimal 346)
+   defining Unicode char U+015B (decimal 347)
+   defining Unicode char U+015C (decimal 348)
+   defining Unicode char U+015D (decimal 349)
+   defining Unicode char U+015E (decimal 350)
+   defining Unicode char U+015F (decimal 351)
+   defining Unicode char U+0160 (decimal 352)
+   defining Unicode char U+0161 (decimal 353)
+   defining Unicode char U+0162 (decimal 354)
+   defining Unicode char U+0163 (decimal 355)
+   defining Unicode char U+0164 (decimal 356)
+   defining Unicode char U+0165 (decimal 357)
+   defining Unicode char U+0168 (decimal 360)
+   defining Unicode char U+0169 (decimal 361)
+   defining Unicode char U+016A (decimal 362)
+   defining Unicode char U+016B (decimal 363)
+   defining Unicode char U+016C (decimal 364)
+   defining Unicode char U+016D (decimal 365)
+   defining Unicode char U+016E (decimal 366)
+   defining Unicode char U+016F (decimal 367)
+   defining Unicode char U+0170 (decimal 368)
+   defining Unicode char U+0171 (decimal 369)
+   defining Unicode char U+0172 (decimal 370)
+   defining Unicode char U+0173 (decimal 371)
+   defining Unicode char U+0174 (decimal 372)
+   defining Unicode char U+0175 (decimal 373)
+   defining Unicode char U+0176 (decimal 374)
+   defining Unicode char U+0177 (decimal 375)
+   defining Unicode char U+0178 (decimal 376)
+   defining Unicode char U+0179 (decimal 377)
+   defining Unicode char U+017A (decimal 378)
+   defining Unicode char U+017B (decimal 379)
+   defining Unicode char U+017C (decimal 380)
+   defining Unicode char U+017D (decimal 381)
+   defining Unicode char U+017E (decimal 382)
+   defining Unicode char U+01CD (decimal 461)
+   defining Unicode char U+01CE (decimal 462)
+   defining Unicode char U+01CF (decimal 463)
+   defining Unicode char U+01D0 (decimal 464)
+   defining Unicode char U+01D1 (decimal 465)
+   defining Unicode char U+01D2 (decimal 466)
+   defining Unicode char U+01D3 (decimal 467)
+   defining Unicode char U+01D4 (decimal 468)
+   defining Unicode char U+01E2 (decimal 482)
+   defining Unicode char U+01E3 (decimal 483)
+   defining Unicode char U+01E6 (decimal 486)
+   defining Unicode char U+01E7 (decimal 487)
+   defining Unicode char U+01E8 (decimal 488)
+   defining Unicode char U+01E9 (decimal 489)
+   defining Unicode char U+01EA (decimal 490)
+   defining Unicode char U+01EB (decimal 491)
+   defining Unicode char U+01F0 (decimal 496)
+   defining Unicode char U+01F4 (decimal 500)
+   defining Unicode char U+01F5 (decimal 501)
+   defining Unicode char U+0218 (decimal 536)
+   defining Unicode char U+0219 (decimal 537)
+   defining Unicode char U+021A (decimal 538)
+   defining Unicode char U+021B (decimal 539)
+   defining Unicode char U+01E02 (decimal 7682)
+   defining Unicode char U+01E03 (decimal 7683)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201A (decimal 8218)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+201E (decimal 8222)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+2039 (decimal 8249)
+   defining Unicode char U+203A (decimal 8250)
+   defining Unicode char U+2423 (decimal 9251)
+)
+Now handling font encoding OT1 ...
+... processing UTF-8 mapping file for font encoding OT1
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu
+File: ot1enc.dfu 2015/12/03 v1.1r UTF-8 support for inputenc
+   defining Unicode char U+00A0 (decimal 160)
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AD (decimal 173)
+   defining Unicode char U+00B8 (decimal 184)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0174 (decimal 372)
+   defining Unicode char U+0175 (decimal 373)
+   defining Unicode char U+0176 (decimal 374)
+   defining Unicode char U+0177 (decimal 375)
+   defining Unicode char U+0218 (decimal 536)
+   defining Unicode char U+0219 (decimal 537)
+   defining Unicode char U+021A (decimal 538)
+   defining Unicode char U+021B (decimal 539)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+)
+Now handling font encoding OMS ...
+... processing UTF-8 mapping file for font encoding OMS
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu
+File: omsenc.dfu 2015/12/03 v1.1r UTF-8 support for inputenc
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+)
+Now handling font encoding OMX ...
+... no UTF-8 mapping file for font encoding OMX
+Now handling font encoding U ...
+... no UTF-8 mapping file for font encoding U
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+02C6 (decimal 710)
+   defining Unicode char U+02DC (decimal 732)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2026 (decimal 8230)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2423 (decimal 9251)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip43
+\LTright=\skip44
+\LTpre=\skip45
+\LTpost=\skip46
+\LTchunksize=\count89
+\LTcapwidth=\dimen106
+\LT@head=\box26
+\LT@firsthead=\box27
+\LT@foot=\box28
+\LT@lastfoot=\box29
+\LT@cols=\count90
+\LT@rows=\count91
+\c@LT@tables=\count92
+\c@LT@chunks=\count93
+\LT@p@ftn=\toks17
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+\fancy@headwidth=\skip47
+\f@ncyO@elh=\skip48
+\f@ncyO@erh=\skip49
+\f@ncyO@olh=\skip50
+\f@ncyO@orh=\skip51
+\f@ncyO@elf=\skip52
+\f@ncyO@erf=\skip53
+\f@ncyO@olf=\skip54
+\f@ncyO@orf=\skip55
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2016/01/03 v1.1b Standard LaTeX Color (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 143.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\labelindent=\skip56
+\enit@outerparindent=\dimen107
+\enit@toks=\toks18
+\enit@inbox=\box30
+\enitdp@description=\count94
+)
+(/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf.sty
+Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+)))
+
+LaTeX Warning: Unused global option(s):
+    [abstracton,openany,nochapterprefix,noappendixprefix,liststotoc,bibtotoc,no
+rmalheadings,pointlessnumbers,BCOR1cm].
+
+(./main.aux)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+ (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count95
+\scratchdimen=\dimen108
+\scratchbox=\box31
+\nofMPsegments=\count96
+\nofMParguments=\count97
+\everyMPshowfont=\toks19
+\MPscratchCnt=\count98
+\MPscratchDim=\dimen109
+\MPnumerator=\count99
+\makeMPintoPDFobject=\count100
+\everyMPtoPDFconversion=\toks20
+)
+Package epstopdf Info: Source file: <bilder/tu-logo_2d_rot.eps>
+(epstopdf)                    date: 2009-07-08 16:30:39
+(epstopdf)                    size: 221602 bytes
+(epstopdf)             Output file: <bilder/tu-logo_2d_rot-eps-converted-to.pdf
+>
+(epstopdf)                    date: 2016-10-06 23:40:26
+(epstopdf)                    size: 3653 bytes
+(epstopdf)             Command: <repstopdf --outfile=bilder/tu-logo_2d_rot-eps-
+converted-to.pdf bilder/tu-logo_2d_rot.eps>
+(epstopdf)             \includegraphics on input line 81.
+Package epstopdf Info: Output file is already uptodate.
+ <bilder/tu-logo_2d_rot-eps-converted-to.pdf, id=1, 1391.1975pt x 1031.855pt>
+File: bilder/tu-logo_2d_rot-eps-converted-to.pdf Graphic file (type pdf)
+
+<use bilder/tu-logo_2d_rot-eps-converted-to.pdf>
+Package pdftex.def Info: bilder/tu-logo_2d_rot-eps-converted-to.pdf used on inp
+ut line 81.
+(pdftex.def)             Requested size: 58.46173pt x 43.36243pt.
+Package epstopdf Info: Source file: <bilder/INET-Logored.eps>
+(epstopdf)                    date: 2009-07-08 16:21:08
+(epstopdf)                    size: 5248 bytes
+(epstopdf)             Output file: <bilder/INET-Logored-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-10-06 07:38:27
+(epstopdf)                    size: 3653 bytes
+(epstopdf)             Command: <repstopdf --outfile=bilder/INET-Logored-eps-co
+nverted-to.pdf bilder/INET-Logored.eps>
+(epstopdf)             \includegraphics on input line 81.
+Package epstopdf Info: Output file is already uptodate.
+
+<bilder/INET-Logored-eps-converted-to.pdf, id=2, 1391.1975pt x 1031.855pt>
+File: bilder/INET-Logored-eps-converted-to.pdf Graphic file (type pdf)
+
+<use bilder/INET-Logored-eps-converted-to.pdf>
+Package pdftex.def Info: bilder/INET-Logored-eps-converted-to.pdf used on input
+ line 81.
+(pdftex.def)             Requested size: 58.46173pt x 43.36243pt.
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./bilder/tu-logo_2d_rot-ep
+s-converted-to.pdf> <./bilder/INET-Logored-eps-converted-to.pdf>] [2]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 111.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 111.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 111.
+ [3] [4] (./section/abstract-de.tex)
+[5] [6] (./section/abstract.tex) [7] [8] (./main.toc [1])
+\tf@toc=\write3
+\openout3 = `main.toc'.
+
+ [2]
+(./section/section1.tex [3]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 69.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 69.
+ [4]) [5]
+(./section/section2.tex
+</home/sakib/soumya/latexNew/latex/internetArchiOld.png, id=57, 938.50626pt x 5
+02.87875pt>
+File: /home/sakib/soumya/latexNew/latex/internetArchiOld.png Graphic file (type
+ png)
+ <use /home/sakib/soumya/latexNew/latex/internetArchiOld.png>
+Package pdftex.def Info: /home/sakib/soumya/latexNew/latex/internetArchiOld.png
+ used on input line 9.
+(pdftex.def)             Requested size: 369.88248pt x 284.52603pt.
+
+</home/sakib/soumya/latexNew/latex/archiNew.png, id=58, 882.29625pt x 500.87125
+pt>
+File: /home/sakib/soumya/latexNew/latex/archiNew.png Graphic file (type png)
+ <use /home/sakib/soumya/latexNew/latex/archiNew.png>
+Package pdftex.def Info: /home/sakib/soumya/latexNew/latex/archiNew.png used on
+ input line 15.
+(pdftex.def)             Requested size: 369.88876pt x 284.53659pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[6 </home/sakib/soumya/latexNew/latex/internetArchiOld.png>] [7 </home/sakib/so
+umya/latexNew/latex/archiNew.png>] [8]
+Overfull \hbox (35.23602pt too wide) in paragraph at lines 50--55
+\OT1/cmr/m/n/10.95 Domain name sys-tem (DNS) is used to trans-late IP ad-dress 
+to cor-re-spond-ing host names.Internally
+ []
+
+</home/sakib/soumya/wholeSLD/dnsBmw.png, id=68, 793.96625pt x 455.7025pt>
+File: /home/sakib/soumya/wholeSLD/dnsBmw.png Graphic file (type png)
+
+<use /home/sakib/soumya/wholeSLD/dnsBmw.png>
+Package pdftex.def Info: /home/sakib/soumya/wholeSLD/dnsBmw.png used on input l
+ine 77.
+(pdftex.def)             Requested size: 369.89316pt x 284.53522pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+</home/sakib/soumya/wholeSLD/httpRequestResponse.png, id=69, 519.9425pt x 454.6
+9875pt>
+File: /home/sakib/soumya/wholeSLD/httpRequestResponse.png Graphic file (type pn
+g)
+ <use /home/sakib/soumya/wholeSLD/httpRequestResponse.png>
+Package pdftex.def Info: /home/sakib/soumya/wholeSLD/httpRequestResponse.png us
+ed on input line 93.
+(pdftex.def)             Requested size: 369.88373pt x 284.53291pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (11.00903pt too wide) in paragraph at lines 98--114
+\OT1/cmr/m/n/10.95 meth-ods used in HTTP re-quest mes-sage like GET,HEAD,POST ,
+PUT,DELETE,CONNECT
+ []
+
+[9]) [10 </home/sakib/soumya/wholeSLD/dnsBmw.png>] (./section/section3.tex
+
+LaTeX Warning: File `/home/sakib/soumya/wholeSLD/High Level Of Approach.png' no
+t found on input line 9.
+
+
+</home/sakib/soumya/wholeSLD/High Level Of Approach.png, id=76, 963.6pt x 722.7
+pt>
+File: /home/sakib/soumya/wholeSLD/High Level Of Approach.png Graphic file (type
+ png)
+ <use /home/sakib/soumya/wholeSLD/High Level Of Approach.png>
+Package pdftex.def Info: /home/sakib/soumya/wholeSLD/High Level Of Approach.png
+ used on input line 9.
+(pdftex.def)             Requested size: 369.87704pt x 284.53154pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \vbox (badness 5847) has occurred while \output is active []
+
+ [11 </home/sakib/soumya/wholeSLD/httpRequestResponse.png>]
+</home/sakib/soumya/latexNew/whois.png, id=82, 681.54625pt x 476.78125pt>
+File: /home/sakib/soumya/latexNew/whois.png Graphic file (type png)
+
+<use /home/sakib/soumya/latexNew/whois.png>
+Package pdftex.def Info: /home/sakib/soumya/latexNew/whois.png used on input li
+ne 40.
+(pdftex.def)             Requested size: 369.891pt x 284.54318pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[12 </home/sakib/soumya/wholeSLD/High Level Of Approach.png>]
+Overfull \hbox (26.78123pt too wide) in paragraph at lines 61--68
+\OT1/cmr/m/n/10.95 From the sec-ond stage shown in figure-6,we re-ceive IP ad-d
+ress and cor-re-spond-ing ARecords.From
+ []
+
+
+Overfull \hbox (10.69214pt too wide) in paragraph at lines 74--89
+\OT1/cmr/m/n/10.95 google-do-mains.com has the pre-fix set ('216.239.32.0/19', 
+'216.239.32.0/24', '216.239.34.0/24',
+ []
+
+
+Overfull \hbox (62.1268pt too wide) in paragraph at lines 74--89
+\OT1/cmr/m/n/10.95 '216.239.36.0/24'), '216.239.38.0/24').Af-ter the above step
+ the pre-fix set will be-come ('216.239.32.0/19'])
+ []
+
+[13 </home/sakib/soumya/latexNew/whois.png>]) [14] (./section/section4.tex
+[15] [16]
+</home/sakib/soumya/latex/scrapy_architecture.png, id=100, 526.96875pt x 371.88
+937pt>
+File: /home/sakib/soumya/latex/scrapy_architecture.png Graphic file (type png)
+ <use /home/sakib/soumya/latex/scrapy_architecture.png>
+Package pdftex.def Info: /home/sakib/soumya/latex/scrapy_architecture.png used 
+on input line 55.
+(pdftex.def)             Requested size: 369.90483pt x 284.53416pt.
+ [17 </home/sakib/soumya/latex/scrapy_architecture.png (PNG copy)>]
+</home/sakib/soumya/latex/archi-1.png, id=105, 866.23625pt x 304.13625pt>
+File: /home/sakib/soumya/latex/archi-1.png Graphic file (type png)
+
+<use /home/sakib/soumya/latex/archi-1.png>
+Package pdftex.def Info: /home/sakib/soumya/latex/archi-1.png used on input lin
+e 80.
+(pdftex.def)             Requested size: 369.88367pt x 284.533pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[18]) [19 </home/sakib/soumya/latex/archi-1.png>] (./section/section5.tex
+File: /home/sakib/soumya/wholeSLD/dnsBmw.png Graphic file (type png)
+
+<use /home/sakib/soumya/wholeSLD/dnsBmw.png>
+Package pdftex.def Info: /home/sakib/soumya/wholeSLD/dnsBmw.png used on input l
+ine 25.
+(pdftex.def)             Requested size: 369.89316pt x 284.53522pt.
+
+Overfull \hbox (12.48682pt too wide) in paragraph at lines 21--30
+\OT1/cmr/m/n/10.95 a wen-site like "<img class="desktop" ti-tle="" alt="" src="
+img/bg-cropped.jpg">",then
+ []
+
+
+Overfull \hbox (7.36661pt too wide) in paragraph at lines 21--30
+\OT1/cmr/m/n/10.95 "www.bmw.com",the ARecord name are a1586.b.akamai.net. and a
+1586.b.akamai.net.
+ []
+
+[20] [21]
+</home/sakib/soumya/latexNew/clubbedSlds.png, id=119, 533.995pt x 489.83pt>
+File: /home/sakib/soumya/latexNew/clubbedSlds.png Graphic file (type png)
+
+<use /home/sakib/soumya/latexNew/clubbedSlds.png>
+Package pdftex.def Info: /home/sakib/soumya/latexNew/clubbedSlds.png used on in
+put line 45.
+(pdftex.def)             Requested size: 369.89915pt x 284.5351pt.
+ [22 </home/sakib/soumya/latexNew/clubbedSlds.png>]) [23] (./section/section6.t
+ex
+</home/sakib/soumya/wholeSLD/graphs/top20SLD.png, id=127, 803.0pt x 602.25pt>
+File: /home/sakib/soumya/wholeSLD/graphs/top20SLD.png Graphic file (type png)
+
+<use /home/sakib/soumya/wholeSLD/graphs/top20SLD.png>
+Package pdftex.def Info: /home/sakib/soumya/wholeSLD/graphs/top20SLD.png used o
+n input line 7.
+(pdftex.def)             Requested size: 369.89911pt x 284.53705pt.
+
+Overfull \hbox (8.41086pt too wide) in paragraph at lines 12--14
+\OT1/cmr/m/n/10.95 pany.Similarly google.com,googleusercontent.com,googlehosted
+.com and google-do-mains.com
+ []
+
+[24 </home/sakib/soumya/wholeSLD/graphs/top20SLD.png>]
+</home/sakib/soumya/wholeSLD/graphs/clubbedSLDWhole.png, id=132, 1169.3286pt x 
+641.0349pt>
+File: /home/sakib/soumya/wholeSLD/graphs/clubbedSLDWhole.png Graphic file (type
+ png)
+ <use /home/sakib/soumya/wholeSLD/graphs/clubbedSLDWhole.png>
+Package pdftex.def Info: /home/sakib/soumya/wholeSLD/graphs/clubbedSLDWhole.png
+ used on input line 30.
+(pdftex.def)             Requested size: 369.87491pt x 284.52113pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[25]
+</home/sakib/soumya/wholeSLD/Rplot.png, id=136, 566.86781pt x 284.56313pt>
+File: /home/sakib/soumya/wholeSLD/Rplot.png Graphic file (type png)
+
+<use /home/sakib/soumya/wholeSLD/Rplot.png>
+Package pdftex.def Info: /home/sakib/soumya/wholeSLD/Rplot.png used on input li
+ne 46.
+(pdftex.def)             Requested size: 369.89555pt x 284.55807pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[26 </home/sakib/soumya/wholeSLD/graphs/clubbedSLDWhole.png>]
+</home/sakib/soumya/wholeSLD/prefixVsasn.png, id=141, 395.22656pt x 229.60782pt
+>
+File: /home/sakib/soumya/wholeSLD/prefixVsasn.png Graphic file (type png)
+ <use /home/sakib/soumya/wholeSLD/prefixVsasn.png>
+Package pdftex.def Info: /home/sakib/soumya/wholeSLD/prefixVsasn.png used on in
+put line 56.
+(pdftex.def)             Requested size: 369.89076pt x 284.54257pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (15.79198pt too wide) in paragraph at lines 64--68
+\OT1/cmr/m/n/10.95 un-der this. They are yunjiasu-cdn.net,jiashule.com, us-east
+-1.elb.amazonaws.com.These
+ []
+
+[27 </home/sakib/soumya/wholeSLD/Rplot.png (PNG copy)>]
+Overfull \hbox (70.52168pt too wide) in paragraph at lines 68--73
+\OT1/cmr/m/n/10.95 lun.com,cloudflare.net,ourwebpic.com, us-west-2.elb.amazonaw
+s.com,eu-west-1.elb.amazonaws.com
+ []
+
+
+Overfull \hbox (173.57367pt too wide) in paragraph at lines 76--81
+\OT1/cmr/m/n/10.95 ter.They are, akamaiedge.net,ap-southeast-1.elb.amazonaws.co
+m, kx-cdn.com,incapdns.net,d2t8dj4tr3q9od.cloudfront.net
+ []
+
+[28 </home/sakib/soumya/wholeSLD/prefixVsasn.png (PNG copy)>]
+</home/sakib/soumya/wholeSLD/objectCount.png, id=148, 803.0pt x 602.25pt>
+File: /home/sakib/soumya/wholeSLD/objectCount.png Graphic file (type png)
+
+<use /home/sakib/soumya/wholeSLD/objectCount.png>
+Package pdftex.def Info: /home/sakib/soumya/wholeSLD/objectCount.png used on in
+put line 93.
+(pdftex.def)             Requested size: 369.89911pt x 284.53705pt.
+
+</home/sakib/soumya/wholeSLD/objectCount/hypergiant.png, id=149, 803.0pt x 602.
+25pt>
+File: /home/sakib/soumya/wholeSLD/objectCount/hypergiant.png Graphic file (type
+ png)
+ <use /home/sakib/soumya/wholeSLD/objectCount/hypergiant.png>
+Package pdftex.def Info: /home/sakib/soumya/wholeSLD/objectCount/hypergiant.png
+ used on input line 98.
+(pdftex.def)             Requested size: 369.89911pt x 284.53705pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[29 </home/sakib/soumya/wholeSLD/objectCount.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 108--146
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 108--146
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [30 </home/sakib/soumya/wholeSLD/objectCount/hypergiant.png>]
+Overfull \hbox (16.37703pt too wide) in paragraph at lines 149--151
+[]\OT1/cmr/m/n/10.95 From last sec-tion we ob-served yunjiasu-cdn.net,jiashule.
+com, us-east-1.elb.amazonaws.com
+ []
+
+) [31] [32] (./section/section7.tex) [33] (./section/section8.tex) [34]
+(./section/section9.tex) [35] (./misc/acronyms.tex) [36]
+(./section/section10.tex
+Underfull \hbox (badness 6741) in paragraph at lines 27--29
+[]\OT1/cmr/m/n/10.95 Internet evo-lu-tion \OT1/cmr/m/it/10.95 https://atos.net/
+content/dam/global/ascent-whitepapers/ascent-
+ []
+
+
+Underfull \hbox (badness 2253) in paragraph at lines 30--33
+[]\OT1/cmr/m/n/10.95 Schonfeld, E. Eric Schmidts \OT1/cmr/m/it/10.95 Gang Of Fo
+ur:Google, Ap-ple,Amazon,And Face-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--40
+[]\OT1/cmr/m/n/10.95 Bernhard Ager \OT1/cmr/m/it/10.95 Im-pact of Lo-ca-tion on
+ Con-tent De-liv-ery\OT1/cmr/m/n/10.95 .
+ []
+
+[37]) [38] [39] [40
+
+] (./main.aux) ) 
+Here is how much of TeX's memory you used:
+ 3062 strings out of 494910
+ 43695 string characters out of 6179836
+ 117631 words of memory out of 5000000
+ 6227 multiletter control sequences out of 15000+600000
+ 9152 words of font info for 32 fonts, out of 8000000 for 9000
+ 36 hyphenation exceptions out of 8191
+ 42i,15n,43p,1557b,358s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on main.pdf (48 pages, 794198 bytes).
+PDF statistics:
+ 222 PDF objects out of 1000 (max. 8388607)
+ 140 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 86 words of extra memory for PDF output out of 10000 (max. 10000000)
+

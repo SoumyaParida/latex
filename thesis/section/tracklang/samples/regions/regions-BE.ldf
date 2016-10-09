@@ -1,0 +1,7 @@
+\providecommand*{\BEunits}{%
+  \renewcommand*{\weightunit}{kg}%
+  \renewcommand*{\lengthunit}{mm}%
+  \renewcommand*{\currencyunit}{EUR}%
+}
+
+\BEunits

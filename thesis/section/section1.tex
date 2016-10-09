@@ -1,0 +1,96 @@
+The Internet has changed a lot within last decade both in technical as well as
+in user experience aspects.With increase in Internet users and their demand for
+more and richer content has led to exponential increase of Internet traffic.Social
+networking sites like Facebook, Twitter enable users to publish their own content
+and share with other users.Users also share videos in different social media sites
+like Youtube,Facebook etc.The highly popular on-demand video and streaming
+sites like Netflix etc., are also playing vital role in increasing Internet user base
+and traffic.Recent traffic studies [3,4] show that a large fraction of Internet
+traffic is originated by a small number of prominent infrastructure which can be
+highly distributed content delivery networks (CDNs) like Akamai or content providers like Google.Poese et al. [3] report a similar observation from the traffic of a European Tier-1 carrier. Labovitz et al. [2] infer that more than 10 \% of the total Internet inter-domain
+traffic originates from Google, and Akamai claims to deliver more than 20 \% of
+the total Web traffic in the Internet [5].
+
+Traditional hosting model like CDNs are the
+most important technical solutions for providing high performance delivery system till now where popular contents are stored in servers of CDNs .But with the
+increase of content within sites ,it is not possible for the popular web sites to provide better performance to end customers by using only the traditional hosting
+model.Instead ,content providers now build their own global backbones, cable
+Internet service providers offer wholesale national transit, and transit ISPs offer
+CDN and cloud / content hosting services.CDNs also build highly distributed
+infrastructures and data centers to replicate the most popular content at different distributed cache servers and locate them at the edge of the network.It help
+them to provide popular content from the nearest server to customers.Hence
+when a user request for a popular web content ,CDN just redirect the user to
+most suitable server by bypassing the saturated links.
+
+Hence due to this change in content delivering phenomenon some researchers
+termed this companies as hyper giants [7] which include large content providers,
+such as Google and yahoo, as well as highly distributed CDNs like Akamai,big cloud computing CDNs like Amazon aws etc. Most of these hyper giants are operating not only a substantial number of data centers but are also building up their own network. Some networking
+researchers are claiming that, due to the phenomenal growth of hyper giants,
+the topological structure of the Internet must be redrawn to include them, together with the Global transit and backbone networks as part of the Internet
+core,resulting in the topology sketched in Figure 2. This may leave the ISPs as
+dump pipe providers to the consumer.
+
+Again it is important to understand that hyper giants are not usually the
+main operators of the network but they play vital role in delivery of the content
+by creating interdependency between them and the main operators by different
+ways and business needs. The producers of the content (popular websites) want
+their content to be delivered to end user in less time for which they have
+to rely on the main operators or hyper giants. Such a scenario cause a large
+amount of traffic flow from hyper giants as well as huge dependency between
+popular websites and hyper giants.It is this symbiosis between the two parties
+that motivates our work ,giving an overview on how far the reach of hyper giants
+in todays Internet.
+
+Again hyper giants now not only provide rich content,they also provide different other services.For example now most of the popular websites having their
+own login systems or login systems which are provided through Google,Twitter,Facebook
+etc.In later case the authentication is verified by Google,Facebook etc.For that
+the popular websites need to embed third party login systems in their websites.Like this there are lot of other services provided by these hyper giants like
+for websites add Google adsense to advertise their products etc.Moreover popular websites need CDNs to store web contents like HTML files,audio files,video files etc. This dependency of popular websites on hyper giants also gives us motivation to check what percentage of these web objects are delivered through hyper giants to popular websites.
+
+A few studies have already investigated about hyper giants and their relationship with popular websites in the recent past.In 2010, Craig Labovitz, then
+of Arbor Networks [2],defined a new type of network entity. By placing google
+in this list,he characterized the hyper giant as a content provider that makes
+massive investments in bandwidth, storage, and computing capacity to maximize efficiencies and performance.The concept of hyper giants also aligns with
+Schmidts [8] assertion which talks about ”gang of four” companies which are responsible for the growth and innovation of Internet. Google, Apple, Amazon,
+and Facebook .Bernhard et al.[9,10] also worked on identifying and mapping the
+content infrastructures that are hosting the most popular content.Th author also purposed a light weight automated technique discover Web content hosting and delivery infrastructures.He identified different types of infrastructures like highly distributed CDNs,CDNs,data centers and hyper giants presence in Internet.Gao et al.[6] analyzed operator interconnections from a more technical perspective.They used a methodology to quantify the type of inter-Autonomous System (AS)relationships that exist in the Internet and classify them into three groups based
+on the state of Border Gateway Protocol (BGP) messages: customer-to-provider,
+peer-to-peer, and sibling-to-sibling relationships.Shavitt and Weinsberg [11] in their paper
+discussed the topological trends of content providers. They create a snapshot
+of the AS-level graph from late 2006 until early 2011, and then analyzed the interconnection trends of the transit and content providers and their implications for the Internet ecosystem. AS graphs are built by traversing IP trace routes and resolving each IP address to its corresponding AS.Shavitt and Weinsberg also found that large content providers like Google, Yahoo!, Microsoft,Facebook, and Amazon have increased their connectivity degree during the observed period and are becoming key players in the Internet ecosystem, strengthening the
+idea that the Internet is becoming flatter.Palacin et [13] defined hyper giants not
+only content providers, they are basically content aggregators. Small companies started using high speed infrastructures to deliver their content to end users.But with increase of content  these high speed infrastructures started absorbing content from the
+long tail, entering fully into the niche of the traditional hosting companies.
+
+By end of this thesis we are able to give answers for some of the important
+research questions which can be summarized as follows:
+
+\begin{itemize}
+\item Identification of hosting infrastructures: We propose a lightweight and
+fully automated approach to discover hyper giants such as highly distributed
+content delivery networks,content providers etc.
+
+\item Classification of hosting infrastructures: We classify individual hosting
+infrastructures and their different deployment strategies based on their
+network.
+
+\item Web content dependency: We quantify the degree of content dependency
+of the popular websites on hyper giants by analyzing different web objects like text files,image files,application files delivered by hyper giants to popular web sites.
+\end{itemize}
+
+This remainder of this thesis is structured as follows.This thesis is separated
+into 7 chapters.
+
+\begin{itemize}
+\item Chapter 2 :It starts with the evolution of Internet architecture from early
+2000s to current time and how the dependency of popular websites on
+hyper giants increases with time.
+\item Chapter 3 :This section will provide the overall methodology used in this
+thesis.
+\item Chapter 4 :This section focuses on the details about environment and technologies used for the prototype. The implementation details of web crawler
+engine, its operations and configuration management are explained.
+\item Chapter 5 describes the measurement details.
+\item Chapter 6 summarizes the results.
+\item Chapter 7 Conclusion will be discussed here..
+\item Chapter 8 This section includes the possible future work.
+\end{itemize}

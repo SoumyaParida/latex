@@ -1,0 +1,5 @@
+\providecommand*{\frenchnames}{%
+  \renewcommand*{\unitname}{unit\'es}%
+}
+
+\frenchnames

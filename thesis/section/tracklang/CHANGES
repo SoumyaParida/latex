@@ -1,0 +1,29 @@
+v1.2 (2015/03/23):
+
+  * New package options:
+    IEirish, ga-IE (Language: Irish Gaelic. Region: Republic of Ireland)
+    GBirish, ga-GB (Language: Irish Gaelic. Region: Northern Ireland)
+    IEenglish, en-IE (Language: English. Region: Republic of Ireland)
+
+v1.1 (2014/11/21):
+
+  * Added \LetTrackLangOption and \@tracklang@declareoption
+
+  * New package options: 
+    en-US, en-AU, en-NZ, fr-BE, pt-BR,
+    en-GB, en-CA, fr-CA, nl-BE, france, fr-FR,
+    ngermanDE, de-DE, netherlands, nl-NL, de-BE, belgiangerman,
+    portugal, pt-PT, spainspanish, es-ES, es-AR, es-BO, es-CL,
+    es-CO, es-CR, es-CU, es-DO, es-EC, es-SV, es-GT, es-HN,
+    es-MX, es-NI, es-PA, es-PY, es-PE, es-PR, es-UY, es-VE,
+    de-CH, fr-CH, it-CH, rm-CH, italy, it-IT, vatican, it-VA,
+    sanmarino, it-SM, sloveneistriaitalian, it-SI, slovenia,
+    sloveneistriaslovenian, istriacountyitalian, it-HR,
+    istriacountycroatian, croatia, maltese, maltamaltese,
+    mt-MT, maltaenglish, en-MT, manx, isleofmanenglish, en-IM,
+    jerseyenglish, en-JE, jersey-french, fr-JE, guernseyenglish,
+    en-GG, guernseyfrench, fr-GG
+
+v1.0 (2014/09/29):
+
+  * Initial release

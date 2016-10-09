@@ -1,0 +1,5 @@
+\providecommand*{\italiannames}{%
+  \renewcommand*{\unitname}{unit\`a di misura}%
+}
+
+\italiannames

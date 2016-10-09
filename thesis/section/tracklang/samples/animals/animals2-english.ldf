@@ -1,0 +1,9 @@
+\ProvidesAnimalsLang{english}
+
+\providecommand*{\englishanimals}{%
+  \renewcommand*{\catname}{cat}%
+  \renewcommand*{\dogname}{dog}%
+  \renewcommand*{\ladybirdname}{bishy-barney-bee}%
+}
+
+\englishanimals

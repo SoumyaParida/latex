@@ -1,0 +1,91 @@
+This section describes how the first prototype of an crawler was built. It explains the
+choice of programming language as well as go into some details of the objects, the rough internal working and their interaction with each other. In the end, the usage of the program will be explained briefly.
+
+\subsection{Choice of programming language}
+Before going for implementation,it is important to know that the whole process involve two major parts.In the first part,we use a web crawler to collect popular website links as well as embedded links.And in second part we are going to analysis these crawled data to find out our result.Hence we need to choose a programming language which should be powerful in development as well as can be used for data analysis.So that any kind of dependency between two procedure can be handled easily.Again language should be free, open and usable by anyone who wishes to run this crawler implementation.Again the language should have good number of open libraries,big community who can help in necessary and should have a lot of documentation available in Internet .For this purpose we choose python as it fulfills all necessary requirement. For development we are going to use python and for data analysis we will use python,pyspark (Python version of spark).
+
+\subsection{Development Tools}
+For development,it is important to choose correct IDE which allows us to write code in less time with minimum effort.Along with this it helps in code completion, syntax highlighting, debugging and refactoring.For this purpose we have chosen "sublime editor" which is free and easy to write python code.
+
+Now second most important aspect is to choose python web crawling tool which will suit our requirement and can be used in future.We will focus on programs that request web services from service providers and programs that scrape data from web sites. Web service applications will involve us in a new kind of programming called client-server programming; the programs we will look at will be client programs making requests from service on the Internet. Although the underlying foundation of a web-scraping program is also a client-server interaction, we will use some tools that hide the details of those interactions, and allow us to fetch web page content directly.For this we have couple of choices which are well known web crawling tools like urlib,beautiful soup,scrapy etc. But Python Scrapy is the best out there, Scrapy crawling is faster than any other platforms, since it uses asynchronous operations (on top of Twisted). Scrapy has better and faster support for parsing (x)html on top of libxml2. Scrapy is a mature framework with full unicode, redirection handling, gzipped responses, odd encodings, integrated HTTP cache etc.Again it is open source having a big community and documentation.
+
+There are lot of different machine learning tools available but as we expect out data to be of some gigabytes,it is better to use that tool which can process data faster.Python and R are popular languages for data scientists due to the large number of modules or packages that are readily available to help them solve their data problems. But traditional uses of these tools are often limiting, as they process data on a single machine where the movement of data becomes time consuming, the analysis requires sampling (which often does not accurately represent the data), and moving from development to production environments requires extensive re-engineering. Spark provides a powerful, unified engine that is both fast (100x faster than Hadoop for large-scale data processing) and easy to use.Hence we are going to Pyspark for our initial data analysis and then we well do further analysis using python and RStudio.
+
+Apart from above tools we use some other tools for the implementation.The following are the list of important softwares and tools used.
+
+\begin{itemize}
+  \item dnspython:it is a DNS toolkit for python.This is used in the code to get the A records of hosts.
+  \item pygeoip :The libarary is used to get the ASN numbers associated with IP addresses.This library is based on Maxmind’s GeoIP C API.
+  \item urlparse :this is used to convert a relative url to an absolute url.
+  \item Public suffix List :This is the collection of all registered host names given by all internet users.The Public Suffix List is an initiative of Mozilla, but is maintained as a community resource.It is available for use in any software, but was originally created to meet the needs of browser manufacturers.In our code we use it to get second level domain from a host name.The "effective\_tld\_names\. dat" is the file which is free downloadable from their site.
+  \item IPython :IPython notebook is used for pyspark code writing and execution.
+  \item matplotlib :Python library used to for making different graphs used in this thesis.
+  \item pygal :Pygal is also another python library which we used to make graphs.
+\end{itemize}
+
+\subsection{Design of Crawler Engine}
+In this section,we will discuss the whole architecture behind the implementation.The design process involves two parts,first one is the architectural overview of crawler engine which takes 100,000 top ranked websites of Alexa as input,crawl the websites , return result file as output from the engine and second part is processing of result file using data processing engine which internally use "pyspark".Along with this,we will also discuss little bit about "Scrapy framework" which is main backbone behind the crawler engine.The input to crawler and result output file matrices also will be discussed on the below section.
+
+\subsubsection{Crawler Engine}
+In this section we will discuss the internal architecture behind the crawler engine.We will start with "Scrapy framework" [19] which is the main crawler engine work behind the whole crawler engine.Scrapy framework is based on spiders which are self-contained crawlers worked by set of given instructions.As it is one of the top ranked open source project,lots of  documentation can be found.The main objective of crawler engine is to take input data in the format of text file which contain the top 100,000 websites of Alexa.Then divide this master domain list into multiple sub domain lists with equal weighted websites and then process each sub domain list using separate crawler instances.Each crawler instance work independently and store all website information like HTTP header information,rank of website in Alexa etc. in result file. 
+\subsubsection{Scrapy Framework}
+Scrapy framework is one of top ranked open source project used for,a fast web crawling framework,used to crawl websites and extract structured data from their pages.It provide option for both focused and broad crawling.In case of focused crawler scrapy crawls a specific domain while in case of broad crawling a large (potentially unlimited) number of domains.Hence for our implementation ,we are going to use the broad crawling.As we can see from figure-7,the main components of the framework contain scrapy engine,scheduler,downloaders,spiders,item pipeline,downloader middlewares.
+
+\begin{itemize}
+\item Scrapy Engine :
+The engine is responsible for controlling the data flow between all components of the system, and triggering events when certain actions occur. 
+
+\item Scheduler :
+The Scheduler receives requests from the engine and enqueues them for feeding them later (also to the engine) when the engine requests them.
+
+\item Downloader :
+The Downloader is responsible for fetching web pages and feeding them to the engine which, in turn, feeds them to the spiders.
+
+\item Spiders :
+Spiders use for to parse responses and extract items from them or additional URLs (requests) to follow.
+
+\item Item Pipeline :
+The Item Pipeline is responsible for processing the items once they have been extracted (or scraped) by the spiders. Typical tasks include cleansing, validation and persistence (like storing the item in a database). For more information see Item Pipeline.
+
+\item Downloader middlewares :
+Downloader middlewares are specific hooks that sit between the Engine and the Downloader and process requests when they pass from the Engine to the Downloader, and responses that pass from Downloader to the Engine.
+
+\end{itemize}
+\begin{figure}[h]
+\includegraphics[width=\textwidth,height=10cm]{/home/sakib/soumya/latex/scrapy_architecture}
+\centering
+\caption{Scrapy Architecture}
+\end{figure}
+
+\subsubsection{Scrapy data types}
+Scrapy uses some specific classes and strings which are used to crawl data.These are written in python and are open source.Scrapy also use twisted framework for multi threading.Some of the classes which we are going to use for implementation are as follows,
+
+\begin{enumerate}
+   \item Spider :Spiders are the classes used to crawl single or multiple domains using different methods like start\_requests(),parse().
+   \begin{itemize}
+     \item start\_requests() :This scrapy method is used to pass domains to parse method for further crawling process.
+     \item parse() :he parse method is in charge of processing the response and returning scraped data and/or more URLs to follow. Other Requests callbacks have the same requirements as the Spider class.
+   \end{itemize}
+      \item Twisted Framework:Twisted supports an abstraction over raw threads — using a thread as a deferred source. Thus, a deferred is returned immediately, which will receive a value when the thread finishes. Callbacks can be attached which will run in the main thread, thus alleviating the need for complex locking solutions. A prime example of such usage, which comes from Twisted's support libraries, is using this model to call into databases. The database call itself happens on a foreign thread, but the analysis of the result happens in the main thread.
+      \item Requests objects:Typically, Request objects are generated in the spiders and pass across the system until they reach the Downloader, which executes the request.A Request object represents an HTTP request, which is usually generated in the Spider and executed by the Downloader, and thus generating a Response.
+	\item Response objects :Request object returns a Response object which travels back to the spider that issued the request.A Response object represents an HTTP response, which is usually downloaded (by the Downloader) and fed to the Spiders for processing.
+
+\end{enumerate}
+\subsection{Workflow}
+The whole workflow is divided into two steps.In first step divided the whole list of 100,000 domains ranked by Alexa into multiple sub lists.Each sublist then will be sent as input to multiple instances of scrapy.In the second step scrapy engine crawls each website link from sub lists and store the results.We will discuss both the steps in following subsections.
+ \subsubsection{PreCrawling Step}
+In precrawling step,main focus is to create multiple instances of scrapy spider.As scrapy is a large memory greedy tool,after testing we decided to create 20 parallel threads which work independently shown in figure 8.Each instance will take separate input file which contain 5000 domains .So we need to divide the master domain list into sublists but we also need to divide it such a way that all the crawlers will complete their crawling in almost same time.Hence we choose to create the sublists with equal weight.Weight points to rank of the websites here.
+
+\begin{figure}[h]
+\includegraphics[width=\textwidth,height=10cm]{/home/sakib/soumya/latex/archi-1}
+\centering
+\caption{Pre Creawling Step}
+\end{figure}
+
+The master domain list contain the the website url and the rank of the websites.So after division the first sublist will contain the websites of 1st rank,21st rank,...99981st rank;second list will contain 2nd rank,22nd rank...99982nd rank websites and so forth for other instances.Hence each sublist will contain 5000 websites with equal division of website ranks. 
+
+\subsubsection{Crawling Step}
+In this step each crawler will take 5000 domains and parse one by one domain to the crawler engine.For each url we download the corresponding web page, extract the linked URLs, and check each url to see whether the extracted url is a fresh url which has not already been seen . With this architecture we are essentially carrying out a very large number of independent crawls of the white listed domains obtained from Alexa.Along with HTTP header information,the crawler engine also extract Arecord details ,ASN details.
+
+\subsection{Conclusion}
+In this section we talked about the softwares we are going to use to complete the whole implementation.We talked about the motivation behind choosing different languages,software tools to complete the implementation.Again we discussed about the web crawler as well internal architecture of crawler engine.In the next section we will talk about the approach to collect traces, i. e., active DNS measurements, in order to evaluate our methodology.

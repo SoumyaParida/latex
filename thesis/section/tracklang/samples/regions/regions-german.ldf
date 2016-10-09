@@ -1,0 +1,5 @@
+\providecommand*{\germannames}{%
+  \renewcommand*{\unitname}{Ma\ss einheiten}%
+}
+
+\germannames

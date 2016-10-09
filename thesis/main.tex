@@ -1,0 +1,193 @@
+\documentclass[a4paper,11pt,abstracton,twoside,titlepage,openany,nochapterprefix,noappendixprefix,liststotoc,bibtotoc,normalheadings,pointlessnumbers,BCOR1cm]{article}
+
+\usepackage{graphicx}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{longtable}
+\usepackage{fancyhdr}
+\usepackage{color}
+\usepackage{url}
+\usepackage{enumitem}
+\bibliographystyle{plain}
+\selectlanguage{english}
+\usepackage{setspace}
+\usepackage{epstopdf}
+
+
+\topmargin  0.0cm
+\headheight 0.0cm
+
+\textwidth 15cm
+\textheight 22cm
+
+\oddsidemargin 0in
+\evensidemargin 0in
+
+\renewcommand{\headheight}{0.7in}
+\renewcommand{\headrulewidth}{0.0pt}
+\setlength{\headwidth}{\textwidth}
+
+\begin{document}
+
+\begin{titlepage}
+\thispagestyle{fancy}
+
+\lhead{
+	\includegraphics[height=0.6in]{bilder/tu-logo_2d_rot.eps}
+}
+\chead{}
+\rhead{
+	\includegraphics[height=0.6in]{bilder/INET-Logored.eps}
+}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+
+
+%%%%%
+%%  This defines the coverpage - change the fields to your personal liking
+%%%%%
+
+\begin{Large}
+\vspace{5em}
+\center
+	\mbox{}\\
+	\vspace{5em}
+	Master-thesis
+%	Diplomarbeit
+%	Master-thesis
+%	Bachelor-thesis
+	\vspace{3em}
+
+	\begin{Huge}
+	What web objects contained in popular websites are delivered through hypergiants.
+	\end{Huge}
+	
+	\mbox{}\\
+	\vspace{5em}
+	Fakultät IV - Elektrotechnik und Informatik\\
+	Intelligent Networks / Intelligente Netze (INET)\\
+	Research Group of Prof. Anja Feldmann, Ph.D.\\
+	\vspace{3em}
+	Soumya Ranjan Parida\\
+	\today\\
+
+	\vspace{4 em}
+	Prüfer: Prof. Anja Feldmann, Ph. D.\\
+	\vspace{-.5 ex}
+	Betreuer: Ingmar Poese\\
+	Juhoon Kim\\
+\end{Large}
+\end{titlepage}
+\pagestyle{empty}
+
+%%%%%
+%%  End cover page
+%%%%%
+
+\mbox{}
+\newpage
+
+\oddsidemargin 0.5in
+\evensidemargin 0in
+
+\vspace*{40em}
+\begin{center}
+\begin{minipage}{11cm}
+\mdseries{
+\begin{normalsize}
+\sffamily
+Die selbständige und eigenhändige Anfertigung versichere ich an Eides Statt. 
+
+\vspace*{2em}
+Berlin, den \today 
+\vspace*{4em}
+%%%%%
+%%  Put your own name here !
+%%%%%
+\begin{small}Max Mustermann\end{small}
+\end{normalsize}
+}
+\end{minipage}
+\end{center}
+
+\mbox{}
+\newpage
+
+\topmargin -2.0cm
+\textheight 24cm
+\textwidth 13cm
+
+\mbox{}
+\newpage
+
+\mbox{}
+\section*{Zusammenfassung}
+\input{section/abstract-de.tex}
+\newpage
+
+\mbox{}
+\newpage
+
+\mbox{}
+\section*{Abstract}
+\input{section/abstract.tex}
+\newpage
+
+\mbox{}
+\newpage
+
+\setcounter{page}{1}
+\tableofcontents
+
+\newpage
+
+\pagestyle{plain}
+\section{Introduction}
+\input{section/section1.tex}
+\newpage
+
+\section{Background}
+\input{section/section2.tex}
+\newpage
+
+\section{Methodology}
+\input{section/section3.tex}
+\newpage
+
+\section{Implementation}
+\input{section/section4.tex}
+\newpage
+
+\section{Measurement}
+\input{section/section5.tex}
+\newpage
+
+\section{Results}
+\input{section/section6.tex}
+\newpage
+
+\section{Conclusion}
+\input{section/section7.tex}
+\newpage
+
+\section{Future Work}
+\input{section/section8.tex}
+\newpage
+
+\section{Appendix}
+\input{section/section9.tex}
+\newpage
+
+\section{List of Acronyms}
+\input{./misc/acronyms}
+
+\newpage
+
+\input{section/section10.tex}
+\newpage
+
+\newpage
+\mbox{}
+\cleardoublepage
+\end{document}

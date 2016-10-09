@@ -1,0 +1,30 @@
+\thispagestyle{empty}
+\vspace*{1.0cm}
+
+\begin{center}
+    \textbf{Abstract}
+\end{center}
+
+\vspace*{0.5cm}
+
+\noindent
+With every passing day there is a wide adoption of mobile connectivity by end-users. A variety of mobile applications are entering the market and the mobile subscribers need to have higher bandwidth and faster connectivity. While there is a growing list of requirements from the end-users, the network service providers need to equip themselves to address the needs of the users.\\\\
+
+\noindent
+With legacy network infrastructure, in most of the cases, service providers overprovision their networks to address the peak hour demands. This leads to excessive costs as most of the time, the average load on network is much lesser than the peak load resulting in weak operation and maintenance of networks. Hence, they see a need to move to cloud based infrastructures that facilitate them to efficiently manage their networks. Service providers are moving to virtual infrastructures, where they can scale-in or scale-out their network resources on demand with the dynamically changing user needs. This thesis focuses on addressing the core network needs, especially towards the scaling of Mobile Management Entity (MME).\\\\
+
+\noindent
+It is good to have a mechanism to scale MMEs in the core network,  while ensuring that the end user doesn\textsc{\char13}t see any changes in the core network. Other approaches like S1-Flex and random load balancing mechanisms exist to scale the core networks. However, the downside with these approaches is that they are not transparent to the user or eNodeB. Hence, a new load balancer on S1-MME interface level is needed to transparently scale the core network, while being as closely compliant as possible to the 3GPP standards. This thesis work focuses on design and implementation of an S1-MME load balancer, that can balance the incoming mobile subscriber traffic across multiple MMEs while still being able to maintain an affinity at transaction level.\\\\
+
+
+\noindent
+For the purpose of integration, Open5GCore toolkit, developed by Fraunhofer FOKUS that provides all access network and core network elements was used. The implemented S1-MME load balancer was verified for its compliance with 3GPP standard and was tested against all the requirements, and performance was evaluated which shows that the designed and implented S1-MME load balaner works as expected by successfully processing S1 Setup, S1AP procedures like Attach, Detach and Handovers. It was able to redirect all the MME signalling messages for all the above stated S1AP procedures to the core network with a delay latency overhead of around 10\% during attach operations. Eventually, possible future enhancements to S1-MME load balancer were discussed.
+
+
+
+
+
+
+
+
+

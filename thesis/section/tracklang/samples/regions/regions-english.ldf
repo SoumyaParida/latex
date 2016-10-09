@@ -1,0 +1,5 @@
+\providecommand*{\englishnames}{%
+  \renewcommand*{\unitname}{units}%
+}
+
+\englishnames

@@ -1,0 +1,30 @@
+% arara: pdftex
+
+\catcode `\@11\relax
+\input tracklang
+\catcode `\@12\relax
+
+\TrackPredefinedDialect{british}
+\TrackPredefinedDialect{american}
+\TrackPredefinedDialect{canadian}
+\TrackPredefinedDialect{canadien}
+\TrackPredefinedDialect{belgique}
+
+Dialect Regions:
+
+\ForEachTrackedDialect{\ThisDialect}{\ThisDialect:
+ \TrackedIsoCodeFromLanguage{\TwoLetterIsoCountryCode}{\ThisDialect}. }
+
+Language Codes:
+
+\ForEachTrackedLanguage{\ThisLanguage}{\ThisLanguage:
+ \TrackedIsoCodeFromLanguage{\TwoLetterIsoLanguageCode}{\ThisLanguage}. }
+
+\ForEachTrackedDialect{\ThisDialect}
+{%
+  \IfTrackedLanguageFileExists{\ThisDialect}{animals-}{.ldf}%
+  {Found ``animals-\CurrentTrackedTag.ldf''\par}%
+  {No file found for dialect ``\ThisDialect''\par}
+}
+
+\bye

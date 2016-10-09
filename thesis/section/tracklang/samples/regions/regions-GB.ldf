@@ -1,0 +1,7 @@
+\providecommand*{\GBunits}{%
+  \renewcommand*{\weightunit}{kg}%
+  \renewcommand*{\lengthunit}{mm}%
+  \renewcommand*{\currencyunit}{GBP}%
+}
+
+\GBunits

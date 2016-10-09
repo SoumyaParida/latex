@@ -1,0 +1,7 @@
+\providecommand*{\USunits}{%
+  \renewcommand*{\weightunit}{lb}%
+  \renewcommand*{\lengthunit}{in}%
+  \renewcommand*{\currencyunit}{USD}%
+}
+
+\USunits

@@ -1,0 +1,21 @@
+\RequirePackage{filecontents}
+\begin{filecontents}{\jobname-acro.tex}
+\newacronym{MS}{MS}{Microsoft}
+\newacronym{CD}{CD}{Compact Disc}
+\newacronym{Mac}{Mac}{Short form of Apple Mac}
+\end{filecontents}
+\documentclass[a4paper]{scrartcl}
+\usepackage[utf8]{inputenc} %Dateikodierung
+\usepackage[acronym,toc]{glossaries}
+\loadglsentries[\acronymtype]{\jobname-acro}
+
+\makeglossaries
+\begin{document}
+\tableofcontents{}
+\printglossary[type=\acronymtype,style=long]
+
+\section{Some examples}
+Some Text \gls{MS} and \gls{Mac}
+
+
+\end{document}

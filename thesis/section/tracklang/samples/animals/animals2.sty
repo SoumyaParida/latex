@@ -1,0 +1,38 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{animals2}[2014/09/28 v1.0 (NLCT) Sample package to test tracklang.sty]
+
+\RequirePackage{tracklang}
+
+% default definitions
+\newcommand\catname{cat}
+\newcommand\dogname{dog}
+\newcommand\ladybirdname{bishy-barney-bee}
+
+
+\newcommand*{\RequireAnimalsLang}[1]{%
+  \@ifundefined{ver@animals2-#1.ldf}{\input{animals2-#1.ldf}}{}%
+}
+
+\newcommand*{\ProvidesAnimalsLang}[1]{%
+  \ProvidesFile{animals2-#1.ldf}%
+}
+
+\AnyTrackedLanguages
+{%
+  \ForEachTrackedDialect{\this@dialect}{%
+    \IfTrackedLanguageFileExists{\this@dialect}%
+    {animals2-}% prefix
+    {.ldf}%
+    {%
+      \RequireAnimalsLang{\CurrentTrackedTag}%
+    }%
+    {%
+       \PackageWarning{animals2}%
+       {No support for language `\this@dialect'}%
+    }%
+  }%
+}
+{% no tracked languages, default already set up
+}
+
+\endinput

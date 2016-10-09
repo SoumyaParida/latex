@@ -1,0 +1,48 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{regions2}[2014/09/29 v1.0 (NLCT) Sample package to test tracklang.sty]
+
+\RequirePackage{tracklang}
+
+\newcommand*{\weightunit}{kg}
+\newcommand*{\lengthunit}{mm}
+\newcommand*{\currencyunit}{EUR}
+
+\newcommand*{\unitname}{units}
+
+\newcommand*{\defaultunits}{%
+  \renewcommand*{\weightunit}{kg}%
+  \renewcommand*{\lengthunit}{mm}%
+  \renewcommand*{\currencyunit}{EUR}%
+}
+
+\AnyTrackedLanguages
+{%
+  \ForEachTrackedDialect{\this@dialect}{%
+    \IfTrackedLanguageFileExists{\this@dialect}%
+    {regions-}% prefix
+    {.ldf}%
+    {%
+      \PackageInfo{regions2}{Loading `regions-\CurrentTrackedTag.ldf'
+      for language `\this@dialect'}%
+      \input{regions-\CurrentTrackedTag.ldf}%
+      \ifx\CurrentTrackedTag\CurrentTrackedLanguage
+        \defaultunits
+      \else
+        \InputIfFileExists{regions-\CurrentTrackedLanguage.ldf}%
+        {}%
+        {%
+          \PackageWarning{regions2}{No support for language
+            `\CurrentTrackedLanguage'}%
+        }%
+      \fi
+    }%
+    {%
+       \PackageWarning{regions2}%
+       {No support for language `\this@dialect'}%
+    }%
+  }%
+}
+{% no tracked languages, default already set up
+}
+
+\endinput

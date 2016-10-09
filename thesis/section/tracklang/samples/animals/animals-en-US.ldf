@@ -1,0 +1,8 @@
+\input{animals-english.ldf}
+
+\providecommand*{\englishUSanimals}{%
+  \englishanimals
+  \renewcommand*{\ladybirdname}{ladybug}%
+}
+
+\englishUSanimals

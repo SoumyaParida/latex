@@ -1,0 +1,23 @@
+\ProvidesAnimalsLang{en-US}
+
+\RequireAnimalsLang{english}%
+
+\providecommand*{\englishUSanimals}{%
+  \englishanimals
+  \renewcommand*{\ladybirdname}{ladybug}%
+}
+
+\englishUSanimals
+
+\@ifundefined{captions\CurrentTrackedDialect}%
+{%
+  \@ifundefined{captions\CurrentTrackedLanguage}{}%
+  {%
+    \expandafter\g@addto@macro
+      \csname captions\CurrentTrackedLanguage\endcsname{\englishUSanimals}%
+  }
+}%
+{%
+  \expandafter\g@addto@macro
+    \csname captions\CurrentTrackedDialect\endcsname{\englishUSanimals}%
+}

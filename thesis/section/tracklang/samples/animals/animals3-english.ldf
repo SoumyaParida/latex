@@ -1,0 +1,21 @@
+\ProvidesAnimalsLang{english}
+
+\providecommand*{\englishanimals}{%
+  \renewcommand*{\catname}{cat}%
+  \renewcommand*{\dogname}{dog}%
+  \renewcommand*{\ladybirdname}{bishy-barney-bee}%
+}
+
+\englishanimals
+
+\@ifundefined{captionsenglish}%
+{%
+  \@ifundefined{captions\CurrentTrackedDialect}{}%
+  {%
+    \expandafter\g@addto@macro
+      \csname captions\CurrentTrackedDialect\endcsname{\englishanimals}%
+  }
+}%
+{%
+  \g@addto@macro\captionsenglish{\englishanimals}%
+}

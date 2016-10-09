@@ -1,0 +1,5 @@
+\providecommand*{\dutchnames}{%
+  \renewcommand*{\unitname}{meeteenheden}%
+}
+
+\dutchnames
