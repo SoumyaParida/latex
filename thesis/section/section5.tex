@@ -1,8 +1,6 @@
-In order to identify the presence of hyper giants in today's Internet and to find out the inter dependency between hyper giants and popular websites, 100000 top ranked websites of Alexa are crawled. To find out the hyper giants, the hosting infrastructures which are serving popular websites are observed. DNS resolution and HTTP header information also extracted to identify the features related to each website link. The features are number of links served by each SLD infrastructure, number of IP addresses resolved through DNS resolution, number of BGP prefixes routed for each IP address and number of AS numbers. These features are used to cluster the SLD infrastructures following the methodology discussed in chapter-3. This chapter explains the overview of data set traces which are collected after each step starting from web crawling, data cleanup procedure, the clustering algorithm and finally web objects to determine the interdependency between hyper giants and popular web sites.
+In order to identify the presence of hyper giants in today's Internet and to find out the degree of dependency on hyper giants to delivery Internet web content.In order to study this, the 100,000 top ranked websites of Alexa are crawled. To find out the hyper giants, the hosting infrastructures which are serving popular websites are observed. DNS resolution and HTTP header information also extracted to identify the features related to each website link. The features are number of links served by each SLD infrastructure, number of IP addresses, number of BGP prefixes for each IP address and number of AS numbers. These features are used to cluster the SLD infrastructures following the methodology discussed in chapter-3. This chapter explains the overview of traces which are collected after each step staring from web crawling to the last step, web object identification.
 \subsection{Web Crawling}
-To obtain a good coverage of the largest hosting infrastructures, the 100000 top ranked websites from Alexa [26] are crawled. Alexa ranks websites based on Internet traffic-users of its tool bar for various web browsers like Google Chrome, Internet explorer, Firefox .Moreover,websites contain a lot of embedded contents like images,videos, advertisements etc. that the browser of the user has to download from the various web servers. These embedded contents can be from different hosting infrastructures. In our study, such embedded content has to be taken into account, as it might be served from servers other than those serving the front page of a popular host name listed in top rank websites of Alexa. To give better understanding, while crawling facebook.com, the front page is served from Facebook data centers while the logo and other meta data come from Akamai. Along with this DNS resolution and HTTP header information also extracted to identify IP addresses, ARecord names etc. related to each website link.
-
-The scrapy crawler queries the HTTP Get method to local DNS resolver for all the website links and store the results in a trace file.
+To obtain a good coverage of the hosting infrastructure, the 100000 top ranked websites from Alexa [26] are crawled. Alexa ranks websites based on Internet traffic-users of its tool bar for various web browsers like Google Chrome, Internet explorer, Firefox . Moreover, websites contain a lot of embedded links to images, videos, advertisements etc. which the browser of the user has to download from the various web servers. These embedded links can be from different hosting infrastructures. In our study, such embedded links has to be taken into account, as it might be served from servers other than those serving the home page. To give better understanding, while crawling facebook.com, the home page is served from Facebook data centers while the logo and other meta data come from Akamai. DNS resolution and HTTP header analysis is carried out on each web link including their corresponding embedded links to extract IP addresses, ARecord name information. The scrapy crawler queries the HTTP Get method to local DNS resolver for all the website links and store the results in a trace file.
 
 Three sample traces are given below,
 
@@ -19,7 +17,7 @@ Three sample traces are given below,
 \end{varwidth}}
 \end{center}
 
-Each trace contain 10 different features which are described below.
+Each trace contain 10 different features, as described below.
 \begin{enumerate}
    \item index: index shows the rank of the website
 	\item depth\_level: 0 or 1.
@@ -41,13 +39,13 @@ for the the website "www.bmw.com",the ARecord name are a1586.b.akamai.net. and a
 \item ASN\_Number=Field():This column stores the ASN number of a IP address.For this we use maxmind IP to ASN mapping file.
     \end{enumerate}
     
-The procedure resulted in total 13919464 number of unique links which is combination of 100,000 top website links of Alexa and the embedded links inside those 100,000 links.
+This procedure resulted in a total number of 13919464 unique links, which includes 100,000 top website links of Alexa, along with their embedded links.
 
 \subsection{Data Cleanup}
-After web crawling procedure, total 13919464 number of traces are collected which are combination of traces from 100,000 top website links of Alexa and the embedded links inside those 100,000 links. To get valid traces, a thorough cleanup process on the raw traces is performed. In each trace, 10 different features are collected. Hence each crawled trace is passed through regular expression to check the validity of the traces based on number of features and type of features. The traces which are not passed through the regular expressions are excluded from further analysis. After data cleanup, 13919464 clean traces are collected which form the basis of this study.
+From the traces that are collected in previous section, there might exist some traces for which one or more of the fields are missing, making them invalid. Such traces should be excluded from further analysis. This process of data cleaning are carried out by using regular expressions to filter out the invalid entries.
 
-From the above section, the SLD infrastructure and corresponding IP addresses are determined. To find out BGP prefix routes of a particular IP address, BGP routing information from RIPE RIS [23] is used. This procedure is carried on 13919464 links. The IP addresses and corresponding BGP prefixes collected through RIPE RIS for SLD infrastructures facebook.com and twitter.com are shown in table.
-
+\subsection{Hosting infrastructure to BGP mapping}
+As explained in section 3.1.1, the tests are carried to find out hosting infrastructure to corresponding BGP prefixes set. The IP addresses and corresponding BGP prefixes collected through RIPE RIS for hosting infrastructure, facebook.com is shown in table below.
 
 \begin{tabular}{|p{3cm}||p{3cm}|p{3cm}| }
  \hline
@@ -56,63 +54,65 @@ From the above section, the SLD infrastructure and corresponding IP addresses ar
  SLD Infrastructure     & IP address&BGP Prefixes\\
  \hline
  facebook.com   & '173.252.88.112', '173.252.88.113', '173.252.88.104', '173.252.88.66', '173.252.90.132', '173.252.88.73'    &'173.252.88.0/21', '173.252.64.0/19'\\
-twitter.com&   '104.244.42.65', '104.244.42.66', '104.244.42.67', '104.244.42.71', '104.244.42.70', '104.244.42.193', '104.244.42.130', '104.244.42.199', '104.244.42.131', '199.96.57.6', '104.244.42.195', '104.244.42.194', '104.244.42.135', '104.244.42.134', '104.244.42.1', '104.244.42.198', '104.244.42.3', '104.244.42.2', '104.244.42.129', '104.244.42.7', '104.244.42.6'   &'104.244.42.0/24', '199.96.56.0/23', '199.96.57.0/24'\\
 \hline
 \end{tabular}
 \newline
+
+From the above table, it can be observed that, the hosting infrastructure facebook.com in column-1 might have hosted several web links that are resolved to the above stated 8 IP addresses as stated in column-2 which can be reached through the set of prefixes as in column-3.
 
 \subsection{Clustering}
-There are some SLD infrastructures which are served by same company. Like akamaiedge.net and akamai.net both these SLD infrastructures are used by Akamai. Hence it is required to find out whether these SLDs are sharing the same infrastructure or not. For this purpose, clustering algorithm is used on all SLDs.
+There are some hosting infrastructure which are administered by same company. For example, both the hosting infrastructure akamaiedge.net and akamai.net are administered by the same company,Akamai. In such cases i tis verified whether these hosting infrastructure share common infrastructure, i which case are clustered together, following the clustering algorithm as described in section 3.2. This procedure is carried out for all the 219604 unique hosting infrastructure, which has resulted in 53852 unique clustered hosting infrastructure.
 
-Overall 219604 unique SLD infrastructures are identified. After clustering algorithm 53852 unique clustered SLD infrastructures are determined.
+To find out hyper giants presence, the features of each clustered hosting infrastructures are analyzed. To find out the feature set of each clustered hosting infrastructure, the corresponding feature set of all the hosting elements involved is aggregate together as described in section 3.2/ 
 
-To find out hyper giants presence, the features of each clustered SLD infrastructures will be analyzed. The features include number of links, number of IP addresses, number of BGP prefixes, number of AS numbers. To find out each of these features for a  clustered SLD infrastructure, corresponding SLD infrastructures clubbed under same clustered SLD infrastructure will be considered. Hence total number of links for a clustered SLD infrastructure will be the sum of all the links served by all SLD infrastructures clubbed under same clustered SLD infrastructure.Similar procedure will be taken to find out other features.
+The below table lists top 20 clustered hosting infrastructure on decreasing order of their number of links they host.
 
-\begin{tabular}{ |p{6cm}||p{1cm}||p{1cm}||p{1cm}||p{1cm}||p{1cm}| }
+\begin{tabular}{ |p{1cm}||p{6cm}||p{1cm}||p{1cm}||p{1cm}||p{1cm}||p{1cm}| }
  \hline
- \multicolumn{6}{|c|}{Clustered SLD infrastructures} \\
+ \multicolumn{7}{|c|}{Clustered SLD infrastructures} \\
  \hline
- Clustered SLD Infrastructure    & SLDs & links& IP addresses& ASNs& prefixes\\
+ sl. no.& Clustered SLD Infrastructure    & SLDs & links& IP addresses& ASNs& prefixes\\
  \hline
-cloudflare.net& 17711& 1295505& 29893& 17 &78\\
-akamaiedge.net& 158& 597533& 3396& 9 &27\\
-google.com& 251& 240910& 195& 1&22\\
-yunjiasu-cdn.net& 6068& 210463& 5907& 21&77\\
-us-east-1.elb.amazonaws.com& 4254& 199109& 10885& 31&115\\
-wpengine.com& 3963& 136400& 4072& 19&115\\
-anycast.me& 2667& 116024& 2207& 3&13\\
-ourwebpic.com& 722& 113746& 772& 16&16\\
-eu-west-1.elb.amazonaws.com& 1946& 100265& 4476& 25&31\\
-kxcdn.com& 1547& 82120& 1235& 7&7\\
-edgecastcdn.net& 73& 79750& 383& 2&11\\
-jiashule.com& 1769& 79038& 2249& 28&100\\
-cloudflare.com& 3& 78907& 34& 1&5\\
-alikunlun.com& 964& 76647& 1155& 17&45\\
-d5nxst8fruw4z.cloudfront.net& 3331& 75660& 1619& 3&7\\
-incapdns.net& 35& 66882& 382& 7&27\\
-fastlylb.net& 73& 65360& 201& 0&4\\
-dynect.net& 1& 62760& 46& 2&5\\
-ap-northeast-1.elb.amazonaws.com& 1308& 60343& 3105& 22&23\\
-d2t8dj4tr3q9od.cloudfront.net& 2363& 59807& 1316& 8&7\\
+1&cloudflare.net& 17711& 1295505& 29893& 17 &78\\
+2&akamaiedge.net& 158& 597533& 3396& 9 &27\\
+3&google.com& 251& 240910& 195& 1&22\\
+4&yunjiasu-cdn.net& 6068& 210463& 5907& 21&77\\
+5&us-east-1.elb.amazonaws.com& 4254& 199109& 10885& 31&115\\
+6&wpengine.com& 3963& 136400& 4072& 19&115\\
+7&anycast.me& 2667& 116024& 2207& 3&13\\
+8&ourwebpic.com& 722& 113746& 772& 16&16\\
+9&eu-west-1.elb.amazonaws.com& 1946& 100265& 4476& 25&31\\
+10&kxcdn.com& 1547& 82120& 1235& 7&7\\
+11&edgecastcdn.net& 73& 79750& 383& 2&11\\
+12&jiashule.com& 1769& 79038& 2249& 28&100\\
+13&cloudflare.com& 3& 78907& 34& 1&5\\
+14&alikunlun.com& 964& 76647& 1155& 17&45\\
+15&d5nxst8fruw4z.cloudfront.net& 3331& 75660& 1619& 3&7\\
+16&incapdns.net& 35& 66882& 382& 7&27\\
+17&fastlylb.net& 73& 65360& 201& 0&4\\
+18&dynect.net& 1& 62760& 46& 2&5\\
+19&ap-northeast-1.elb.amazonaws.com& 1308& 60343& 3105& 22&23\\
+20&d2t8dj4tr3q9od.cloudfront.net& 2363& 59807& 1316& 8&7\\
 \hline
 \end{tabular}
 \newline
 
-The top 20 clustered SLD infrastructures in the decreasing order of clubbed SLDs are shown in figure 10.The second column shows the number of SLD infrastructures clubbed under same clustered SLD infrastructure. The third column contain number of links served by the clustered SLD infrastructure.Similarly fourth column shows number of IP addresses resolved, fifth column shows the number of ASNs  and sixth column shows number of bgp prefixes collected for clustered SLD infrastructure. From figure it can be seen under cloudflare.net, 17711 number of SLDs clubbed which is  10,68\% of all child slds clubbed.From the table it can be also observed that three different Clustered SLD infrastructure where the main SLD having cloud flare in SLD naming pattern.These three clustered SLD infrastructures are cloudflare.net,d2t8dj4tr3q9od.cloudfront.net,d5nxst8fruw4z.cloudfront.net
-All the three SLD infrastructures are from same parent company cloudflare.net.But they shows different clustered infrastructure which shows that they have different infrastructure from each other in terms of bgp prefixes.Similarly we can five different clustered SLD infrastructure having amazon in their SLD naming pattern.Both amazon and cloudflare are big CDNs ,they also provide a lot of other services like  Internet Security services,distributed domain name server services, web hosting service etc.Similarly amazon provide cloud computing services,infrastructure services etc. to their customers.This unveils that big hosting infrastructures maintain different SLD infrastructures separately which might they use for different purposes. 
+The columns 1-6 from table represent name of the clustered hosting infrastructure, number of hosting infrastructure that are merged into the same cluster, number of links collectively hosted by the cluster, collective set of IP addresses of the cluster, collective number of ASNs of the cluster and collective  BGP prefixes of the cluster respectively.
+From table, it can be observed that 17711 number of SLDs merged with cloudflare.net. From the table it can be observed that two different clustered hosting infrastructure in sl. no. 1, 13, belonging to the same company, cloudflare but remained in different clusters.This is because, they have different infrastructure from each other in terms of BGP prefixes. Same is the case for hosting infrastructure in sl. no. x,y,z administered by Amazon. This might be because of big hosting infrastructure use different infrastructure for various operations.
 
+\subsection{Candidate Analysis for hyper giant}
 \begin{figure}[h]
 \includegraphics[width=\textwidth,height=10cm]{/home/sakib/soumya/wholeSLD/graphs/clubbedSLDWhole.png}
 \centering
 \caption{Number of SLDs served by different SLD infrastructure clusters.}
 \end{figure}
 
-From figure it can be seen that, almost 80\% of the total unclustered SLDs got clustered into first 3.73\% of SLDs .It shows that these 3.73 \% of top SLDs have footprint all over the world through highly distributed CDNs, data centers etc. Other SLDs share their infrastructures with these top 3.73\% of clustered infrastructures. Hence there is a possibility to get the hyper giants in these 3.73\% of clustered SLD infrastructures.But there are SLD infrastructures who have their own infrastructures in the form of data centers. Hence they don't share any other SLD infrastructures. Like facebook.com who has its own infrastructures in the form of data centers all over the world. In fact from figure ,it is also observed that almost 82.45\% of clustered infrastructures who does not share their infrastructure with no more than another SLD infrastructure.It means there are companies who work independently by creating their own infrastructures.This can be data centers all over world.Although these 82.45\% of clustered infrastructure do not share their infrastructure with no more than single infrastructure, still some of them serve a large number of links which make them another candidate for hyper giant analysis.
+From figure it can be seen that, almost 80\% of the total unclustered hosting infrastructure got clustered into first 3.73\% of hosting infrastructure. Many of the other hosting infrastructure share their infrastructures with these top 3.73\% of clustered infrastructures. Hence there is a possibility to get the hyper giants in these 3.73\% of clustered hosting infrastructure. But there are hosting infrastructure who have their own infrastructure in the form of data centers. Hence they don't share any other hosting infrastructure. Like facebook.com who has its own infrastructure in the form of data centers all over the world. In fact from figure ,it is also observed that almost 82.45\% of clustered infrastructure who does not share their infrastructure with no more than another hosting infrastructure. It means there are companies who work independently by creating their own infrastructure.This can be data centers all over world. Although these 82.45\% of clustered infrastructure do not share their infrastructure with no more than single infrastructure, still some of them serve a large number of links which make them another candidate for hyper giant analysis.
 
-Hence to get a better picture, the clustered SLD infrastructures will be analyzed based on how many links they served. Hence by sorting all clustered SLD infrastructures in their decreasing order of links, it is found that top 5.95 \% (=3205) clustered SLD infrastructures serve almost 80\% of links and have 78.65 \% of SLDs. Hence there is a possibility of getting hyper giants in this range.
+Hence to get a better picture, the clustered hosting infrastructure will be analyzed based on how many links they served. Hence by sorting all clustered hosting infrastructure in their decreasing order of links, it is found that top 5.95 \% (=3205) clustered hosting infrastructure serve almost 80\% of links and have 78.65 \% of hosting infrastructure. Hence hyper giants can be found in this range.
 
-\subsection{Web objects}
-Different web objects embedded in home pages of 100,000 top ranked web sites of Alexa are also collected.After crawling it is observed that total 285 different types of objects from 219604 unique second level domains are present in Internet. The main web objects which shown are text/html which is around 38\% of all object types crawled.Similarly SLDs serve almost 42 \% of image files.
+\subsection{Collection of web objects}
+Different web objects embedded in home pages of 100,000 top ranked web sites of Alexa are also collected.After crawling, it is observed that total 285 different types of objects from 13919464 links present in Internet. 38\% of all the URLs constitute of object type text, while 42 \% of URLs constitute of object type image.
 
 \subsection{Conclusion}
-In this section we define our approach of selecting SLDs after clustering algorithm.This will help to find out prominent infrastructures present in today' Internet.We also talk about different metrics considered while crawling web site.
+This chapter outline the measurements obtained after crawling the 100,000 top ranked websites of Alexa. This has resulted in total of 13919464 links which include both the home pages of these top ranked websites and their corresponding embedded links. After applying DNS resolution on these links, 219604 hosting infrastructure are detected. On clustering these infrastructure, it has resulted in total 53852 clustered hosting infrastructure. It is found that the top 5.95\% clustered infrastructure alone are serving 80\% of all URLs. It is also found out that 78.65 \% of hosting infrastructure pools into the same 5.95\% clustered infrastructure. It is for this reason, it can be conveniently assumed that the hyper giants are exists in these top 5.95 \% of clustered hosting infrastructure, owing to zipf's law. The measurements revealed that all the URLs constitute 38\% of object type text/html, while 42 \% of URLs are of the object type image.

@@ -1,47 +1,36 @@
-The Internet is the largest network system in the world and is growing even bigger. Recent study shows that, by 2015 there are more than 3 billion active Internet users in the world [2]. With increase in Internet users and their demand for more and more richer content has led to exponential increase of Internet traffic. High resolution videos, graphic-rich multimedia online games, interactive audio and video, high quality audio streaming etc. are contributing in large in upsurge of traffic. Consequently, websites having vast and rich content require different strategies to distribute their content all over the world in order to give their user a good quality of experience.
-  
-Response time on web is a really important matter of concern for many of its users. Longer loading times of websites will result in poor user experience. This will have a severe impact on the digital businesses. It is found out that slow loading websites cost the U.S. e-commerce market more than 500 billion dollar annually [Ref: hostingfacts].  According to E-Commerce and conversion statistics, 40\% of web users abandon a website if it takes more than 3 seconds to load. There are situations where sometimes, a website receives a huge amount of hits, resulting in the need to handle the peak loads. For this reason, these websites host their content using cloud based infrastructure where the required resources can be scaled on-demand. There are some websites that very rich in content. In order to give their users a better experience, they host their content on content delivery networks spread across the globe thus bringing the content close to their users. Some websites build their own dedicated data centers to deliver content, while some others use the content hosted by other content providers. Recent studies suggest that some of these hosting infrastructures such as CDNs, Cloud services and Content providers are responsible for a major fraction of Internet traffic, termed as hyper giants of Internet [3,4].
+The Internet is the largest network system in the world and is growing even bigger. Recent study [1] shows that, by 2015 there were more than 3 billion active Internet users in the world. With increase in Internet users and their demand for more and more richer content has led to exponential increase of Internet traffic. High resolution videos, graphic-rich multimedia on-line games, interactive audio and video, high quality audio streaming etc. are contributing to large upsurge in traffic. Consequently, websites having vast and rich content require different strategies to distribute their content all over the world in order to give their user a good quality of experience.
 
-That hyper giants are not usually the main operators of the network but they play vital role in delivery of the content by creating interdependency between them and the main operators by different ways and business needs. The producers of the content (popular websites) want their content to be delivered to end user in less time for which they have to rely on the main operators or hyper giants. Such a scenario cause a large amount of traffic flow from hyper giants as well as huge dependency between popular websites and hyper giants.It is this symbiosis between the
-two parties that motivates our work ,giving an overview on how far the reach of hyper
-giants in todays Internet.
+Quality of Experience (QoE) for end users is a key factor in the success of a new Internet service. Response time on web is a really important matter of concern. Longer loading times of websites will result in poor user experience. This will have a severe impact on the digital businesses. It is found out that slow loading websites cost the U.S. e-commerce market more than 500 billion dollar annually. According to e-commerce and conversion statistics, 40\% of web users abandon a website if it takes more than 3 seconds to load [Ref: hostingfacts]. There are situations where sometimes, a website receives a huge amount of hits, resulting in the need to handle the peak loads. For this reason, websites host their content using cloud based infrastructure where the required resources can be scaled on-demand. The websites that are highly rich in content, in order to give their users a better experience host their content on content delivery networks. This brings the web content closer to the users, thus reducing the response time. Some other websites use content providers  to host their content. Recent studies suggest [3,4] that some of these hosting infrastructures such as CDNs, Cloud services and Content providers are responsible for a major fraction of Internet traffic, making them hyper giants.
 
-Hyper giants build a large infrastructure all around the world to deliver content ensuring a faster response. The websites use these infrastructure to store their content, such as audios ,videos, test/html files etc. Therefore these hyper giants can directly impact the way the web objects are delivered in today's Internet. It is important for the owners of these websites to know the degree to which their web content rely on hyper giants. It is this symbiosis between the two parties that motivates our work ,giving an overview on how far the reach of hyper giants in todays Internet.
-
-The Internet architecture is getting complex day by day by how hyper giants work. Therefore it is very important to identify and study their role. In 2010, Craig Labovitz, then of Arbor Networks [2],first time characterized hyper giant. By placing Google in this list, the author described the hyper giant as, a content provider that makes massive investments in bandwidth, storage, and computing capacity to maximize efficiencies and performance. This concept of hyper giants also aligns with Schmidts [8] assertion which talks about ”gang of four” companies which are responsible for the growth and innovation of Internet. Google, Apple, Amazon, and Facebook. Bernhard et al.[9,10] also worked on identifying and mapping the content infrastructure that are hosting the most popular content. The author also purposed a light weight automated technique to discover web content hosting and delivery infrastructure. Palacin et [13] defined hyper giants not
-only content providers, they are basically content aggregators. Small companies started using high speed infrastructures to deliver their content to end users.But with increase of content  these high speed infrastructures started absorbing content from the long tail, entering fully into the niche of the traditional hosting companies.Poses et el[], also 
+The appearance of hyper giants has influenced the Internet topology. Hyper giants construct peering links with different autonomous systems (ASs). In this way, hyper giants are able to reduce the transit cost of traffic traversing through large ISPs and able to serve content in faster way. The producers of the content (popular websites) want their content to be delivered to end user in less time for which they rely on hyper giants. Hyper giants build a large infrastructure all around the world to deliver content ensuring a faster response. The websites use these infrastructure to store their content, such as audios ,videos, test/html files etc. Such a scenario causes a large amount of traffic flow from hyper giants. This makes some websites reliant on hyper giants. Therefore these hyper giants can directly impact the way the web objects are delivered in today's Internet. Hence, it is important for the owners of these websites to know the degree to which they rely on hyper giants to deliver their content. It is this symbiosis between these two parties that motivates our work ,giving an overview on how far the reach of hyper giants in todays Internet.
 
 By end of this thesis we are able to provide answers for some of the important research questions which can be summarized as follows:
 
 \begin{itemize}
-\item Identification of hosting infrastructures: We propose a lightweight and
-fully automated approach to discover hyper giants such as highly distributed
-content delivery networks,content providers etc.
+\item Identification of hyper giants: We propose a fully automated approach to discover hyper giants such as highly distributed content delivery networks, content providers, cloud computing services etc.
 
-\item Web content dependency: We quantify the degree of content dependency
+\item Dependency of content delivery on hyper giants: We quantify the degree of content dependency
 of the popular websites on hyper giants by analyzing different web objects like text files,image files,application files delivered by hyper giants to popular web sites.
 \end{itemize}
 
 This remainder of this thesis is structured as follows.This thesis is separated
 into 7 chapters.
 
-\textbf{Chapter \ref{cha:chapter2}} :It starts with over view on the evolution of Internet architecture from early 2000s to current time and how the dependency of popular websites on
-hyper giants increases with time.
+\textbf{Chapter \ref{cha:chapter2}} :It starts with over view on the evolution of Internet architecture from early 2000s to current time and the techniques used to analyze the hosting infrastructure.
 \\
 \\
-\textbf{Chapter \ref{cha:chapter3}}:discusses the methodology used to identify the hyper giants in today's Internet and the interdependency between popular websites and hyper giants.
+\textbf{Chapter \ref{cha:chapter3}}:discusses the methodology used to identify the hyper giants in today's Internet and the dependency between popular websites on hyper giants.
 \\
 \\
 \textbf{Chapter \ref{cha:chapter4}}:discusses on the technologies used for implementing the web crawler. It describes design of the web crawler, followed by the work flow. 
 \\
 \\
-\textbf{Chapter \ref{cha:chapter5}}describes the resultant data to verify the methodology discussed in chapter 3.
+\textbf{Chapter \ref{cha:chapter5}}:Using the methods discussed in chapter-3, tests are conducted to extract the results that are required to analyze the hosting infrastructure deployed by the websites. 
 \\
 \\
-\textbf{Chapter \ref{cha:chapter6}}summarizes the results to identify the hyper giants and the interdependency between popular websites and hyper giants.
+\textbf{Chapter \ref{cha:chapter6}}summarizes the results to identify the hyper giants and the dependency of popular websites on hyper giants.
 \\
 \\
 \textbf{Chapter \ref{cha:chapter7}}discusses the problems encountered during the thesis work, learnings during this phase, any solutions to overcome the problems encountered. It also summarizes the results and includes possible future work. 
 \\
 \\
-\textbf{Chapter \ref{cha:chapter8}}discusses the possible future work.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.10.5)  13 OCT 2016 11:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.10.5)  13 OCT 2016 19:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -683,7 +683,7 @@ converted-to.pdf bilder/tu-logo_2d_rot.eps>
 (epstopdf)             \includegraphics on input line 85.
 Package epstopdf Info: Output file is already uptodate.
 
-<bilder/tu-logo_2d_rot-eps-converted-to.pdf, id=200, 1391.1975pt x 1031.855pt>
+<bilder/tu-logo_2d_rot-eps-converted-to.pdf, id=209, 1391.1975pt x 1031.855pt>
 File: bilder/tu-logo_2d_rot-eps-converted-to.pdf Graphic file (type pdf)
 
 <use bilder/tu-logo_2d_rot-eps-converted-to.pdf>
@@ -701,7 +701,7 @@ nverted-to.pdf bilder/INET-Logored.eps>
 (epstopdf)             \includegraphics on input line 85.
 Package epstopdf Info: Output file is already uptodate.
 
-<bilder/INET-Logored-eps-converted-to.pdf, id=201, 1391.1975pt x 1031.855pt>
+<bilder/INET-Logored-eps-converted-to.pdf, id=210, 1391.1975pt x 1031.855pt>
 File: bilder/INET-Logored-eps-converted-to.pdf Graphic file (type pdf)
 
 <use bilder/INET-Logored-eps-converted-to.pdf>
@@ -724,7 +724,7 @@ ination with the same identifier (name{page.1}) has been already used, duplicat
 e ignored
 <to be read again> 
                    \relax 
-l.47 ...{\numberline {7}Conclusion}{36}{section.7}
+l.47 ...opular web sites}{33}{subsubsection.6.3.2}
                                                    [1])
 \tf@toc=\write4
 \openout4 = `main.toc'.
@@ -734,67 +734,71 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.147 \newpage
-               [2] (./section/section1.texpdfTeX warning (ext4): destination wi
-th the same identifier (name{page.3}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.13 
-      [3]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 17.
- (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+               [2] (./section/section1.tex
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 10.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 17.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 10.
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.19 \textbf{Chapter \ref{cha:chapter2}}
+                                         :It starts with over view on the ev...
+[3]
+
+LaTeX Warning: Reference `cha:chapter2' on page 4 undefined on input line 19.
 
 
-LaTeX Warning: Reference `cha:chapter2' on page 4 undefined on input line 28.
+LaTeX Warning: Reference `cha:chapter3' on page 4 undefined on input line 22.
 
 
-LaTeX Warning: Reference `cha:chapter3' on page 4 undefined on input line 32.
+LaTeX Warning: Reference `cha:chapter4' on page 4 undefined on input line 25.
 
 
-LaTeX Warning: Reference `cha:chapter4' on page 4 undefined on input line 35.
+LaTeX Warning: Reference `cha:chapter5' on page 4 undefined on input line 28.
 
 
-LaTeX Warning: Reference `cha:chapter5' on page 4 undefined on input line 38.
+LaTeX Warning: Reference `cha:chapter6' on page 4 undefined on input line 31.
 
 
-LaTeX Warning: Reference `cha:chapter6' on page 4 undefined on input line 41.
-
-
-LaTeX Warning: Reference `cha:chapter7' on page 4 undefined on input line 44.
-
-
-LaTeX Warning: Reference `cha:chapter8' on page 4 undefined on input line 47.
+LaTeX Warning: Reference `cha:chapter7' on page 4 undefined on input line 34.
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 28--152
+Underfull \hbox (badness 10000) in paragraph at lines 19--152
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--152
+Underfull \hbox (badness 10000) in paragraph at lines 19--152
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--152
+Underfull \hbox (badness 10000) in paragraph at lines 19--152
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--152
+Underfull \hbox (badness 10000) in paragraph at lines 19--152
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--152
+Underfull \hbox (badness 10000) in paragraph at lines 19--152
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--152
+Underfull \hbox (badness 10000) in paragraph at lines 19--152
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--152
 
  []
 
@@ -803,88 +807,81 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.152 \newpage
-               [4] (./section/section2.tex
-</home/sakib/soumya/latexNew/latex/internetArchiOld.png, id=313, 938.50626pt x 
+               [4] (./section/section2.texpdfTeX warning (ext4): destination wi
+th the same identifier (name{page.5}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.13 
+      [5]
+</home/sakib/soumya/latexNew/latex/internetArchiOld.png, id=327, 938.50626pt x 
 502.87875pt>
 File: /home/sakib/soumya/latexNew/latex/internetArchiOld.png Graphic file (type
  png)
  <use /home/sakib/soumya/latexNew/latex/internetArchiOld.png>
 Package pdftex.def Info: /home/sakib/soumya/latexNew/latex/internetArchiOld.png
- used on input line 10.
+ used on input line 15.
 (pdftex.def)             Requested size: 369.88248pt x 284.52603pt.
 
-</home/sakib/soumya/latexNew/latex/archiNew.png, id=314, 882.29625pt x 500.8712
+</home/sakib/soumya/latexNew/latex/archiNew.png, id=328, 882.29625pt x 500.8712
 5pt>
 File: /home/sakib/soumya/latexNew/latex/archiNew.png Graphic file (type png)
  <use /home/sakib/soumya/latexNew/latex/archiNew.png>
 Package pdftex.def Info: /home/sakib/soumya/latexNew/latex/archiNew.png used on
- input line 16.
+ input line 21.
 (pdftex.def)             Requested size: 369.88876pt x 284.53659pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has 
+pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.22 
-      [5 </home/sakib/soumya/latexNew/latex/internetArchiOld.png>]pdfTeX warnin
-g (ext4): destination with the same identifier (name{page.6}) has been already 
+l.32 
+      [6 </home/sakib/soumya/latexNew/latex/internetArchiOld.png>]pdfTeX warnin
+g (ext4): destination with the same identifier (name{page.7}) has been already 
 used, duplicate ignored
 <to be read again> 
                    \relax 
-l.27 
-      [6 </home/sakib/soumya/latexNew/latex/archiNew.png>]pdfTeX warning (ext4)
-: destination with the same identifier (name{page.7}) has been already used, du
-plicate ignored
-<to be read again> 
-                   \relax 
-l.45 
-      [7]
-Overfull \hbox (35.23602pt too wide) in paragraph at lines 51--56
+l.47 C
+      loud infrastructure refers to the hardware and software components, su...
+[7 </home/sakib/soumya/latexNew/latex/archiNew.png>]
+Overfull \hbox (35.23602pt too wide) in paragraph at lines 56--61
 \OT1/cmr/m/n/10.95 Domain name sys-tem (DNS) is used to trans-late IP ad-dress 
 to cor-re-spond-ing host names.Internally
- []
-
-</home/sakib/soumya/wholeSLD/dnsBmw.png, id=328, 793.96625pt x 455.7025pt>
-File: /home/sakib/soumya/wholeSLD/dnsBmw.png Graphic file (type png)
-
-<use /home/sakib/soumya/wholeSLD/dnsBmw.png>
-Package pdftex.def Info: /home/sakib/soumya/wholeSLD/dnsBmw.png used on input l
-ine 78.
-(pdftex.def)             Requested size: 369.89316pt x 284.53522pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-</home/sakib/soumya/wholeSLD/httpRequestResponse.png, id=329, 519.9425pt x 454.
-69875pt>
-File: /home/sakib/soumya/wholeSLD/httpRequestResponse.png Graphic file (type pn
-g)
- <use /home/sakib/soumya/wholeSLD/httpRequestResponse.png>
-Package pdftex.def Info: /home/sakib/soumya/wholeSLD/httpRequestResponse.png us
-ed on input line 94.
-(pdftex.def)             Requested size: 369.88373pt x 284.53291pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Overfull \hbox (11.00903pt too wide) in paragraph at lines 99--115
-\OT1/cmr/m/n/10.95 meth-ods used in HTTP re-quest mes-sage like GET,HEAD,POST ,
-PUT,DELETE,CONNECT
  []
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.8}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.115 
-       [8]) [9 </home/sakib/soumya/wholeSLD/dnsBmw.png>]
-(./section/section3.tex [10 </home/sakib/soumya/wholeSLD/httpRequestResponse.pn
-g>] </home/sakib/soumya/wholeSLD/method-1.png, id=343, 987.69pt x 353.32pt>
+l.73 
+      [8]
+</home/sakib/soumya/wholeSLD/dnsBmw.png, id=341, 793.96625pt x 455.7025pt>
+File: /home/sakib/soumya/wholeSLD/dnsBmw.png Graphic file (type png)
+
+<use /home/sakib/soumya/wholeSLD/dnsBmw.png>
+Package pdftex.def Info: /home/sakib/soumya/wholeSLD/dnsBmw.png used on input l
+ine 83.
+(pdftex.def)             Requested size: 369.89316pt x 284.53522pt.
+
+</home/sakib/soumya/wholeSLD/httpRequestResponse.png, id=342, 519.9425pt x 454.
+69875pt>
+File: /home/sakib/soumya/wholeSLD/httpRequestResponse.png Graphic file (type pn
+g)
+ <use /home/sakib/soumya/wholeSLD/httpRequestResponse.png>
+Package pdftex.def Info: /home/sakib/soumya/wholeSLD/httpRequestResponse.png us
+ed on input line 99.
+(pdftex.def)             Requested size: 369.88373pt x 284.53291pt.
+ [9 </home/sakib/soumya/wholeSLD/dnsBmw.png>]
+Overfull \hbox (11.00903pt too wide) in paragraph at lines 104--120
+\OT1/cmr/m/n/10.95 meth-ods used in HTTP re-quest mes-sage like GET,HEAD,POST ,
+PUT,DELETE,CONNECT
+ []
+
+) [10 </home/sakib/soumya/wholeSLD/httpRequestResponse.png>]
+(./section/section3.tex
+</home/sakib/soumya/wholeSLD/method-1.png, id=353, 987.69pt x 353.32pt>
 File: /home/sakib/soumya/wholeSLD/method-1.png Graphic file (type png)
 
 <use /home/sakib/soumya/wholeSLD/method-1.png>
@@ -892,7 +889,10 @@ Package pdftex.def Info: /home/sakib/soumya/wholeSLD/method-1.png used on input
  line 10.
 (pdftex.def)             Requested size: 369.8855pt x 284.53253pt.
 
-</home/sakib/soumya/wholeSLD/method-2.png, id=344, 938.50626pt x 424.58624pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+</home/sakib/soumya/wholeSLD/method-2.png, id=354, 938.50626pt x 424.58624pt>
 File: /home/sakib/soumya/wholeSLD/method-2.png Graphic file (type png)
 
 <use /home/sakib/soumya/wholeSLD/method-2.png>
@@ -903,7 +903,7 @@ Package pdftex.def Info: /home/sakib/soumya/wholeSLD/method-2.png used on input
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-</home/sakib/soumya/latexNew/whois.png, id=345, 681.54625pt x 476.78125pt>
+</home/sakib/soumya/latexNew/whois.png, id=355, 681.54625pt x 476.78125pt>
 File: /home/sakib/soumya/latexNew/whois.png Graphic file (type png)
 
 <use /home/sakib/soumya/latexNew/whois.png>
@@ -914,8 +914,8 @@ ne 25.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[11 </home/sakib/soumya/wholeSLD/method-1.png>] [12 </home/sakib/soumya/wholeSL
-D/method-2.png>] [13 </home/sakib/soumya/latexNew/whois.png>]
+[11] [12 </home/sakib/soumya/wholeSLD/method-1.png>] [13 </home/sakib/soumya/wh
+oleSLD/method-2.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 62--62
 []\OT1/cmr/m/n/10.95 Let (host-ing in-fras-truc-ture,Prefix set)s are,
  []
@@ -956,19 +956,20 @@ Underfull \hbox (badness 10000) detected at line 62
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 3668) has occurred while \output is active []
 
- [14])
-[15] (./section/section4.tex [16] [17]
-</home/sakib/soumya/latex/scrapy_architecture.png, id=381, 526.96875pt x 371.88
+ [14 </home/sakib/soumya/latexNew/whois.png>] [15]) [16] (./section/section4.te
+x [17]
+[18]
+</home/sakib/soumya/latex/scrapy_architecture.png, id=395, 526.96875pt x 371.88
 937pt>
 File: /home/sakib/soumya/latex/scrapy_architecture.png Graphic file (type png)
  <use /home/sakib/soumya/latex/scrapy_architecture.png>
 Package pdftex.def Info: /home/sakib/soumya/latex/scrapy_architecture.png used 
 on input line 54.
 (pdftex.def)             Requested size: 369.90483pt x 284.53416pt.
- [18 </home/sakib/soumya/latex/scrapy_architecture.png (PNG copy)>]
-</home/sakib/soumya/latex/archi-1.png, id=388, 866.23625pt x 304.13625pt>
+ [19 </home/sakib/soumya/latex/scrapy_architecture.png (PNG copy)>]
+</home/sakib/soumya/latex/archi-1.png, id=402, 866.23625pt x 304.13625pt>
 File: /home/sakib/soumya/latex/archi-1.png Graphic file (type png)
 
 <use /home/sakib/soumya/latex/archi-1.png>
@@ -979,280 +980,177 @@ e 77.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [19] [20 </home/sakib/soumya/latex/archi-1.png>] (./section/section5.tex
-Underfull \hbox (badness 10000) in paragraph at lines 19--19
+) [20] [21 </home/sakib/soumya/latex/archi-1.png>] (./section/section5.tex
+Underfull \hbox (badness 10000) in paragraph at lines 17--17
 []\OT1/cmr/m/n/10.95 [55017, 0, 200, 'text/html', 19719, 'http://parsquran.com'
 , 'a',
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--19
+Underfull \hbox (badness 10000) in paragraph at lines 17--17
 []\OT1/cmr/m/n/10.95 [55017, 1, 200, 'text/html; charset=UTF-8', 0,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--19
+Underfull \hbox (badness 10000) in paragraph at lines 17--17
 \OT1/cmr/m/n/10.95 'http://parsquran.com/site/sitemap.html', 'a', 'parsquran.co
 m',
  []
 
 
-Underfull \hbox (badness 1337) in paragraph at lines 19--19
+Underfull \hbox (badness 1337) in paragraph at lines 17--17
 []\OT1/cmr/m/n/10.95 [21794, 0, 200, 'text/html', 2014, 'http://gomap.az', 'a',
  'gomap.az',
  []
 
 
-Underfull \hbox (badness 10000) detected at line 19
+Underfull \hbox (badness 10000) detected at line 17
 \OT1/cmr/m/n/10.95 'http://parsquran.com/site/sitemap.html', 'a', 'parsquran.co
 m',
  []
 
 
-Underfull \hbox (badness 10000) detected at line 19
+Underfull \hbox (badness 10000) detected at line 17
 []\OT1/cmr/m/n/10.95 [55017, 1, 200, 'text/html; charset=UTF-8', 0,
  []
 
-[21]
+[22]
 File: /home/sakib/soumya/wholeSLD/dnsBmw.png Graphic file (type png)
  <use /home/sakib/soumya/wholeSLD/dnsBmw.png>
 Package pdftex.def Info: /home/sakib/soumya/wholeSLD/dnsBmw.png used on input l
-ine 35.
+ine 33.
 (pdftex.def)             Requested size: 369.89316pt x 284.53522pt.
 
-Overfull \hbox (24.04517pt too wide) in paragraph at lines 31--40
+Overfull \hbox (24.04517pt too wide) in paragraph at lines 29--38
 \OT1/cmr/m/n/10.95 in a web-site like "<img class="desktop" ti-tle="" alt="" sr
 c="img/bg-cropped.jpg">",then
  []
 
-[22]
-Underfull \hbox (badness 10000) in paragraph at lines 56--56
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 54--54
 []\OT1/cmr/m/n/10.95 SLD In-fras-truc-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--58
+Underfull \hbox (badness 10000) in paragraph at lines 56--56
 []\OT1/cmr/m/n/10.95 '173.252.88.112',
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--58
+Underfull \hbox (badness 10000) in paragraph at lines 56--56
 \OT1/cmr/m/n/10.95 '173.252.88.113',
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--58
+Underfull \hbox (badness 10000) in paragraph at lines 56--56
 \OT1/cmr/m/n/10.95 '173.252.88.104',
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--58
+Underfull \hbox (badness 10000) in paragraph at lines 56--56
 \OT1/cmr/m/n/10.95 '173.252.88.66',
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--58
+Underfull \hbox (badness 10000) in paragraph at lines 56--56
 \OT1/cmr/m/n/10.95 '173.252.90.132',
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--59
+Underfull \hbox (badness 10000) in paragraph at lines 56--57
 []\OT1/cmr/m/n/10.95 '173.252.88.0/21',
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-[]\OT1/cmr/m/n/10.95 '104.244.42.65',
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-\OT1/cmr/m/n/10.95 '104.244.42.66',
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-\OT1/cmr/m/n/10.95 '104.244.42.67',
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-\OT1/cmr/m/n/10.95 '104.244.42.71',
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-\OT1/cmr/m/n/10.95 '104.244.42.70',
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-\OT1/cmr/m/n/10.95 '104.244.42.193',
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-\OT1/cmr/m/n/10.95 '104.244.42.130',
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-\OT1/cmr/m/n/10.95 '104.244.42.199',
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-\OT1/cmr/m/n/10.95 '104.244.42.131',
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-\OT1/cmr/m/n/10.95 '199.96.57.6',
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-\OT1/cmr/m/n/10.95 '104.244.42.195',
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-\OT1/cmr/m/n/10.95 '104.244.42.194',
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-\OT1/cmr/m/n/10.95 '104.244.42.135',
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-\OT1/cmr/m/n/10.95 '104.244.42.134',
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-\OT1/cmr/m/n/10.95 '104.244.42.1',
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-\OT1/cmr/m/n/10.95 '104.244.42.198',
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-\OT1/cmr/m/n/10.95 '104.244.42.3',
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-\OT1/cmr/m/n/10.95 '104.244.42.2',
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-\OT1/cmr/m/n/10.95 '104.244.42.129',
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-\OT1/cmr/m/n/10.95 '104.244.42.7',
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--60
-[]\OT1/cmr/m/n/10.95 '104.244.42.0/24',
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--60
-\OT1/cmr/m/n/10.95 '199.96.56.0/23',
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 52--63
+Underfull \hbox (badness 10000) in paragraph at lines 50--60
 
  []
 
-[23]
-Underfull \hbox (badness 10000) in paragraph at lines 75--75
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--74
+[]\OT1/cmr/m/n/10.95 sl.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--74
 []\OT1/cmr/m/n/10.95 IP
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 75--75
+Underfull \hbox (badness 10000) in paragraph at lines 74--74
 \OT1/cmr/m/n/10.95 ad-
  []
 
 
-Overfull \hbox (4.6102pt too wide) in paragraph at lines 75--75
+Overfull \hbox (4.6102pt too wide) in paragraph at lines 74--74
 \OT1/cmr/m/n/10.95 dresses| 
  []
 
 
-Overfull \hbox (7.8344pt too wide) in paragraph at lines 75--76
+Overfull \hbox (7.8344pt too wide) in paragraph at lines 74--75
 []\OT1/cmr/m/n/10.95 prefixes| 
  []
 
 
-Overfull \hbox (9.8723pt too wide) in paragraph at lines 77--77
+Overfull \hbox (9.8723pt too wide) in paragraph at lines 76--76
 []\OT1/cmr/m/n/10.95 1295505| 
  []
 
 
-Overfull \hbox (4.3973pt too wide) in paragraph at lines 78--78
+Overfull \hbox (4.3973pt too wide) in paragraph at lines 77--77
 []\OT1/cmr/m/n/10.95 597533| 
  []
 
 
-Overfull \hbox (4.3973pt too wide) in paragraph at lines 79--79
+Overfull \hbox (4.3973pt too wide) in paragraph at lines 78--78
 []\OT1/cmr/m/n/10.95 240910| 
  []
 
 
-Overfull \hbox (4.3973pt too wide) in paragraph at lines 80--80
+Overfull \hbox (4.3973pt too wide) in paragraph at lines 79--79
 []\OT1/cmr/m/n/10.95 210463| 
  []
 
 
-Overfull \hbox (4.3973pt too wide) in paragraph at lines 81--81
+Overfull \hbox (4.3973pt too wide) in paragraph at lines 80--80
 []\OT1/cmr/m/n/10.95 199109| 
  []
 
 
-Overfull \hbox (4.3973pt too wide) in paragraph at lines 82--82
+Overfull \hbox (4.3973pt too wide) in paragraph at lines 81--81
 []\OT1/cmr/m/n/10.95 136400| 
  []
 
 
-Overfull \hbox (4.3973pt too wide) in paragraph at lines 83--83
+Overfull \hbox (4.3973pt too wide) in paragraph at lines 82--82
 []\OT1/cmr/m/n/10.95 116024| 
  []
 
 
-Overfull \hbox (4.3973pt too wide) in paragraph at lines 84--84
+Overfull \hbox (4.3973pt too wide) in paragraph at lines 83--83
 []\OT1/cmr/m/n/10.95 113746| 
  []
 
 
-Overfull \hbox (4.3973pt too wide) in paragraph at lines 85--85
+Overfull \hbox (4.3973pt too wide) in paragraph at lines 84--84
 []\OT1/cmr/m/n/10.95 100265| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 71--100
+Overfull \hbox (27.64165pt too wide) in paragraph at lines 70--99
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--99
 
  []
 
 
-Overfull \hbox (3.93967pt too wide) in paragraph at lines 101--103
-\OT1/cmr/m/n/10.95 tures are cloud-flare.net,d2t8dj4tr3q9od.cloudfront.net,d5nx
-st8fruw4z.cloudfront.net All the
- []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-</home/sakib/soumya/wholeSLD/graphs/clubbedSLDWhole.png, id=426, 1169.3286pt x 
+ [24]
+</home/sakib/soumya/wholeSLD/graphs/clubbedSLDWhole.png, id=441, 1169.3286pt x 
 641.0349pt>
 File: /home/sakib/soumya/wholeSLD/graphs/clubbedSLDWhole.png Graphic file (type
  png)
@@ -1261,116 +1159,92 @@ Package pdftex.def Info: /home/sakib/soumya/wholeSLD/graphs/clubbedSLDWhole.png
  used on input line 105.
 (pdftex.def)             Requested size: 369.87491pt x 284.52113pt.
 
-[24] [25 </home/sakib/soumya/wholeSLD/graphs/clubbedSLDWhole.png>]) [26]
-(./section/section6.tex
-</home/sakib/soumya/wholeSLD/graphs/top20SLD.png, id=442, 803.0pt x 602.25pt>
-File: /home/sakib/soumya/wholeSLD/graphs/top20SLD.png Graphic file (type png)
-
-<use /home/sakib/soumya/wholeSLD/graphs/top20SLD.png>
-Package pdftex.def Info: /home/sakib/soumya/wholeSLD/graphs/top20SLD.png used o
-n input line 7.
-(pdftex.def)             Requested size: 369.89911pt x 284.53705pt.
-
-Overfull \hbox (8.41086pt too wide) in paragraph at lines 12--14
-\OT1/cmr/m/n/10.95 pany.Similarly google.com,googleusercontent.com,googlehosted
-.com and google-do-mains.com
- []
-
-[27 </home/sakib/soumya/wholeSLD/graphs/top20SLD.png>]
-File: /home/sakib/soumya/wholeSLD/graphs/clubbedSLDWhole.png Graphic file (type
- png)
-
-<use /home/sakib/soumya/wholeSLD/graphs/clubbedSLDWhole.png>
-Package pdftex.def Info: /home/sakib/soumya/wholeSLD/graphs/clubbedSLDWhole.png
- used on input line 30.
-(pdftex.def)             Requested size: 369.87491pt x 284.52113pt.
-
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[28]
-</home/sakib/soumya/wholeSLD/Rplot.png, id=455, 566.86781pt x 284.56313pt>
+[25]) [26 </home/sakib/soumya/wholeSLD/graphs/clubbedSLDWhole.png>]
+(./section/section6.tex
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 3.
+
+</home/sakib/soumya/wholeSLD/Rplot.png, id=452, 566.86781pt x 284.56313pt>
 File: /home/sakib/soumya/wholeSLD/Rplot.png Graphic file (type png)
 
 <use /home/sakib/soumya/wholeSLD/Rplot.png>
 Package pdftex.def Info: /home/sakib/soumya/wholeSLD/Rplot.png used on input li
-ne 46.
+ne 9.
 (pdftex.def)             Requested size: 369.89555pt x 284.55807pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[29]
-</home/sakib/soumya/wholeSLD/prefixVsasn.png, id=462, 395.22656pt x 229.60782pt
+ [27 </home/sakib/soumya/wholeSLD/Rplot.png (PNG copy)>]
+</home/sakib/soumya/wholeSLD/prefixVsasn.png, id=460, 395.22656pt x 229.60782pt
 >
 File: /home/sakib/soumya/wholeSLD/prefixVsasn.png Graphic file (type png)
  <use /home/sakib/soumya/wholeSLD/prefixVsasn.png>
 Package pdftex.def Info: /home/sakib/soumya/wholeSLD/prefixVsasn.png used on in
-put line 56.
+put line 19.
 (pdftex.def)             Requested size: 369.89076pt x 284.54257pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Overfull \hbox (15.79198pt too wide) in paragraph at lines 64--68
+Overfull \hbox (15.79198pt too wide) in paragraph at lines 27--31
 \OT1/cmr/m/n/10.95 un-der this. They are yunjiasu-cdn.net,jiashule.com, us-east
 -1.elb.amazonaws.com.These
  []
 
-[30 </home/sakib/soumya/wholeSLD/Rplot.png (PNG copy)>]
-Overfull \hbox (70.52168pt too wide) in paragraph at lines 68--73
+
+Overfull \hbox (70.52168pt too wide) in paragraph at lines 31--36
 \OT1/cmr/m/n/10.95 lun.com,cloudflare.net,ourwebpic.com, us-west-2.elb.amazonaw
 s.com,eu-west-1.elb.amazonaws.com
  []
 
-
-Overfull \hbox (173.57367pt too wide) in paragraph at lines 76--81
+[28 </home/sakib/soumya/wholeSLD/prefixVsasn.png (PNG copy)>]
+Overfull \hbox (173.57367pt too wide) in paragraph at lines 39--44
 \OT1/cmr/m/n/10.95 ter.They are, akamaiedge.net,ap-southeast-1.elb.amazonaws.co
 m, kx-cdn.com,incapdns.net,d2t8dj4tr3q9od.cloudfront.net
  []
 
-[31 </home/sakib/soumya/wholeSLD/prefixVsasn.png (PNG copy)>]
-</home/sakib/soumya/wholeSLD/objectCount.png, id=473, 803.0pt x 602.25pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [29]
+</home/sakib/soumya/wholeSLD/objectCount.png, id=472, 803.0pt x 602.25pt>
 File: /home/sakib/soumya/wholeSLD/objectCount.png Graphic file (type png)
 
 <use /home/sakib/soumya/wholeSLD/objectCount.png>
 Package pdftex.def Info: /home/sakib/soumya/wholeSLD/objectCount.png used on in
-put line 93.
+put line 56.
 (pdftex.def)             Requested size: 369.89911pt x 284.53705pt.
 
-</home/sakib/soumya/wholeSLD/objectCount/hypergiant.png, id=474, 803.0pt x 602.
+</home/sakib/soumya/wholeSLD/objectCount/hypergiant.png, id=473, 803.0pt x 602.
 25pt>
 File: /home/sakib/soumya/wholeSLD/objectCount/hypergiant.png Graphic file (type
  png)
  <use /home/sakib/soumya/wholeSLD/objectCount/hypergiant.png>
 Package pdftex.def Info: /home/sakib/soumya/wholeSLD/objectCount/hypergiant.png
- used on input line 98.
+ used on input line 61.
 (pdftex.def)             Requested size: 369.89911pt x 284.53705pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[32 </home/sakib/soumya/wholeSLD/objectCount.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 108--146
+[30 </home/sakib/soumya/wholeSLD/objectCount.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 71--109
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 108--146
+Underfull \hbox (badness 10000) in paragraph at lines 71--109
 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [33 </home/sakib/soumya/wholeSLD/objectCount/hypergiant.png>]
-Overfull \hbox (16.37703pt too wide) in paragraph at lines 149--151
+ [31 </home/sakib/soumya/wholeSLD/objectCount/hypergiant.png>]
+Overfull \hbox (16.37703pt too wide) in paragraph at lines 112--114
 []\OT1/cmr/m/n/10.95 From last sec-tion we ob-served yunjiasu-cdn.net,jiashule.
 com, us-east-1.elb.amazonaws.com
  []
 
-) [34] [35] (./section/section7.tex) [36] (./section/section8.tex) [37]
+) [32] [33] (./section/section7.tex) [34] (./section/section8.tex) [35]
 (./section/section9.tex
 Underfull \hbox (badness 10000) in paragraph at lines 8--8
 []\OT1/cmr/m/n/10.95 Clustered SLD
@@ -1496,7 +1370,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--184
 
  []
 
-[38] (./misc/acronyms.tex) [39] (./section/section10.tex
+[36] (./misc/acronyms.tex) [37] (./section/section10.tex
 Underfull \hbox (badness 6741) in paragraph at lines 27--29
 []\OT1/cmr/m/n/10.95 Internet evo-lu-tion \OT1/cmr/m/it/10.95 https://atos.net/
 content/dam/global/ascent-whitepapers/ascent-
@@ -1514,40 +1388,73 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--40
  Con-tent De-liv-ery\OT1/cmr/m/n/10.95 .
  []
 
-[40]) [41] [42]
+[38]) [39] [40]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 197.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 197.
  (./main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 197.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 197.
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: E4A52384A0CA47805713939D294EC77D;3617.
 
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 72742B58EE6C228E7D096DB93384A824;3802
+(rerunfilecheck)             After:  7E158E275612C5634DA3B9F599F0E971;3593.
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 7645 strings out of 494910
- 112959 string characters out of 6179836
- 225559 words of memory out of 5000000
- 10601 multiletter control sequences out of 15000+600000
+ 7643 strings out of 494910
+ 112854 string characters out of 6179836
+ 228559 words of memory out of 5000000
+ 10598 multiletter control sequences out of 15000+600000
  9152 words of font info for 32 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 42i,15n,43p,1688b,594s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmti10.pfb>
-Output written on main.pdf (50 pages, 801114 bytes).
+ 42i,15n,43p,1901b,594s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{subsubsection.6.3.3} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.6.3.2} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.6.3.1} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.6.3} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.6.2.4} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.6.2.3} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.6.2.2} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.6.2.1} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.6.2} has been referenced but does not ex
+ist, replaced by a fixed one
+
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmti10.pfb>
+Output written on main.pdf (48 pages, 764319 bytes).
 PDF statistics:
- 619 PDF objects out of 1000 (max. 8388607)
- 532 compressed objects within 6 object streams
- 155 named destinations out of 1000 (max. 500000)
- 478 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 621 PDF objects out of 1000 (max. 8388607)
+ 538 compressed objects within 6 object streams
+ 157 named destinations out of 1000 (max. 500000)
+ 489 words of extra memory for PDF output out of 10000 (max. 10000000)
 

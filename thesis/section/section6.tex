@@ -1,43 +1,6 @@
-In this section,the prominent hosting infrastructures will be identified first.Next these prominent infrastructures will be clustered together using the cluster algorithm  described in chapter-3.Once clustered SLD infrastructures are identified,those will be analyzed further to gain insight on the their deployment and hosting strategies.Finally based on their strategies hyper giants will be determined.Once hyper giants will be determined ,the dependency between them and popular websites will be examined by taking into consideration that what type of web objects like images,videos,HTML files etc delivered through these hyper giants to popular websites. 
+This chapter analyzes the measurements obtained from chapter 5 to identify hyper giants by studying the features of clustered hosting infrastructure such as number of links served by the cluster, number of IP addresses that belong to the cluster, number of BGP prefixes to reach the cluster, number of AS numbers that belong to cluster. Once hyper giants are determined, the dependency of popular websites on them will be examined by taking into consideration that the type of web objects like images, videos, HTML files etc delivered by these hyper giants. 
 
-\subsection{Analyzing prominent infrastructures}
-In this section we will analyses the SLD infrastructures present in Internet based on number of URLs served by them.A small subset of the SLDs are analyzed to understand if there are common characteristics present within them.
-\begin{figure}[h]
-\includegraphics[width=\textwidth,height=10cm]
-{/home/sakib/soumya/wholeSLD/graphs/top20SLD}
-\centering
-\caption{Top 20 SLDs}
-\end{figure}
-
-From figure-11 ,it is found that there are some SLDs which are served by same company.Like akamaiedge.net and akamai.net both are CNAMEs used by Akamai company.Similarly google.com,googleusercontent.com,googlehosted.com and googledomains.com all are used by Google.Normally companies used different names when they serve different services to the customer or different name for certain  located customers.This can be seen from the CNAMEs used by amazonaws.
-us-east-1.elb.amazonaws.com,eu-west-1.elb.amazonaws.com are two examples of naming pattern used by the amazon to provide services to distinct located customers.But here the question arises that these names are pointing to same infrastructure or different.If they are pointing to same infrastructure they should be considered as one ,else separately.Hence it is important to identify if these SLDs share same the infrastructure or not.This can be identified by analyzing the bgp prefixes they share.To measure this we are going to take RIPE bgp prefixes of each SLD routed to and cluster all the SLDs that use the same bgp prefixes.
-
-The top 20 SLDs serve almost 13.13\% of all the URLs crawled.These 20 SLDs contain not only CDNs like Akamai, Cloudflare etc., but also contain content providers like Google,Facebook.It also contain SLDs like amazonaws which provides cloud computing services while some other SLDs are web hosting companies like ccgslb.net.A small fraction of data set gives us multiple types of infrastructures.Classification of different infrastructures cannot be done using only number of links.To know if a infrastructure is highly distributed all across the world,the number of ASN number need to be checked.
-
-\subsubsection{Conclusion}
-From this section the following observations can be inferred.
-\begin{enumerate}
-\item There are some SLDs which are served by same parent company like akamaiedge.net and akamai.net which are served by company Akamai.Hence it is important to identify whether they can be clustered into same infrastructure or not.This cannot be analyzed with just the number of URLs instead we need to check the footprint covered by these SLDs in the world by checking their bgp prefix routes. 
-\item Since it is identified that there is a possibility of some SLDs getting clustered , it is important not to restrict the test sample for the top 20 of SLDs,but should be extended to all the 219604 SLDs.
-\end{enumerate}
-In the next section,we will discuss the steps to identify the hyper giants using the clustering algorithm, as discussed in chapter 3 methodology section.
-\subsection{Identifying hyper giants}
-In 2010, Craig Labovitz, then of Arbor Networks,characterized the hyper giant as a content provider that makes massive investments in bandwidth, storage, and computing capacity to maximize efficiencies and performance.But as the architecture of Internet evolves,researchers found that the Internet has now become a flatter infrastructure where there are fewer autonomous systems connected to each other and they try to have a bigger footprint in terms of number of bgp prefixes than before.In this way they are able to diversify their architecture as well as able to move content to even closer to their customers.They termed this infrastructure providers as hyper giants [14].
-
-Overall we get total 219604 unique second level domains.But from them a lot of SLDs which can be clustered into other SLDs.
-
-\begin{figure}[h]
-\includegraphics[width=\textwidth,height=10cm]{/home/sakib/soumya/wholeSLD/graphs/clubbedSLDWhole.png}
-\centering
-\caption{Number of SLDs served by different SLD infrastructure clusters.}
-\end{figure}
-
-After clustering algorithm we are able to get 53852 unique clustered SLD infrastructures.From there ,almost 80\% of the total unclustered SLDs got clustered into first 3.73\% of SLDs .It shows that these 3.73 \% of top SLDs have footprint all over the world through highly distributed CDNs,data centers etc.Other SLDs share their infrastructures with these top 3.73\% of clustered infrastructures.Hence there is a possibility to get the hyper giants in these 3.73\% of clustered SLD infrastructures.But there are SLD infrastructures who have their own infrastructures in the form of data centers.Hence they don't share any other SLD infrastructures.Like facebook.com who has its own infrastructures in the form of data centers all over the world.In fact we also found almost 82.45\% of clustered infrastructures who does not share their infrastructure with no more than another SLD infrastructure.It means there are companies who work independently by creating their own infrastructures.This can be data centers all over world.Although these 82.45\% of clustered infrastructure do not share their infrastructure with no more than single infrastructure, still some of them serve a large number of links which make them another candidate for hyper giant analysis.
-
-Hence to get a better picture we will see clustered SLD infrastructures based on how many links they served.So we sorted all clustered SLD infrastructures in their decreasing order of links they serve and we found that top 5.95 \% (=3205) clustered SLD infrastructures serve almost 80\% of links and have 78.65 \% of SLDs.Hence there is a possibility of getting hyper giants in this range.
-
-\subsubsection{Clustered SLDs}
-From last section we identified 5.95\% (=3205) clustered SLD infrastructures as candidates for hyper giant analysis.To identify the hyper giants,two different steps will be followed.In the first step,the 5.95\% clustered SLD infrastructures will be analyzed based on number of links they serve, to number of IP addresses they resolve.The big SLD cluster infrastructures will be separated from small SLD infrastructures by end of this step.In the next step we will again compare number of prefixes they resolved as a clustered SLD infrastructure to number of ASN numbers they belong to.This will give us a better idea how their whole infrastructures are distributed all over the world.After these two process we will try to identify the hyper giants.
+\subsubsection{Identifying hyper giants}
 
 \subsubsection{case 1 :number of Links Vs number of IP addresses}
 In this section we will take the top 3205 SLD infrastructures and cluster them based on their number of links to ip addresses they served.
@@ -100,7 +63,14 @@ In this section,first we will see different types of objects delivered through 2
 \caption{top 10 object percentage used by all hyper giants}
 \end{figure}
 
-Figure-15 and figure-16 shows top 10 object types in form of percentage delivered by both hype giants and slds.In case of hyper giants top 10 object types deliver almost 98.82 \% of all object types.Again we can see that most of these object types are HTML files.HTML carries almost 68.27\% of object type in compare to other object types.Similarly 75.04\% of  text object types which contain text/html,text/css,text/xml,text/js etc., are delivered through hyper giants where as only 19.29\% of image files delivered through hyper giants.
+Figure-15 and figure-16 shows top 10 object types in terms of their percentage of the total web objects they served .In case of hyper giants top 10 object types deliver almost 98.82 \% of the total object types they host. It can be inferred from the graph that hyper giants host 68.27\% of HTML object type making it the single highest contributor to the total web objects it hosts. 
+
+
+Furthermore, 75.04\% of the total object types it hosts are of text object type such as text/html,text/css,text/xml,text/js etc. Furthermore, 18\% of the total object types it hosts are of image object type such as image/png and image/jpeg. 
+
+, are delivered through hyper giants where as only 19.29\% of image files delivered through hyper giants.
+
+
 
 In case of SLDs,top 10 object types carries almost 97.94\% of all object types  which is very much similar to the percentage of objects delivered by hyper giants.The highest web object type delivered through all SLDs as well as hyper giants is text/html but it can be observed that in case of all SLDs,text/html carries almost 38\% of all web objects which is around 68.27\% in case of delivering through hyper giants.In case of all SLDs ,object types are distributed properly.If we add image/jpeg,image/png,image/gif then all SLDs serve more image files than HTML files.But same is not the case for hyper giants.Similarly it can be seen that almost 46.77\% of text files delivered through whole sld set which is almost 1.5 times more in case of hyper giants.But in case of image files ,SLDs serve almost 42 \% of all web objects which is almost double the image files served through hyper giants.This different behavior might be because popular content websites normally store more dynamic files in CDNs where as in case of image files they store at their own servers.
 

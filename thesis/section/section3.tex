@@ -26,6 +26,26 @@ To find out the hyper giants in Internet,the hosting infrastructure which are se
 \centering
 \caption{RIPE RIS bgp prefixes using whois command}
 \end{figure}
+
+\begin{lstlisting}
+{
+typedef struct _s1ap_balancer_session_t {
+    uint32_t s1ap_balancer_index;
+    str enb_mme_name;
+    struct {
+        ip_address ipv4;
+        ip_address ipv4_target;
+        enb_ue_s1ap_id_t  enb_ue_s1ap_id;
+    }enb;
+    struct{
+        ip_address ipv4;
+        mme_ue_s1ap_id_t  mme_ue_s1ap_id;
+    }mme;
+    struct _s1ap_balancer_session_t *next,*prev;
+} s1ap_loadbalancer_session_t;
+[caption= Main Sesssion for transaction mapping, label=lst:mainsession]
+\end{lstlisting}
+
 From DNS resolution, the hosting infrastructure and corresponding IP addresses are determined. To find out BGP prefix routes of a particular IP address, BGP routing information from RIPE RIS [23] will be used. In figure-7, "route" shows the BGP prefixes of a IP address. From the figure this can be observed that the IP address 104.121.76.73 can be routed via two different prefixes 104.64.0.0/10 and 104.121.76.0/24. So both the prefixes for this IP will be considered for further analysis. This procedure will be carried out for each IP addresses of hosting infrastructure which will result in (hosting infrastructure, prefixes) mapping.
 
 \subsection{Clustering}
@@ -71,31 +91,31 @@ p = numner of links served by SLD1
 q = number of links served by SLD2
 r = number of links served by SLD3
 
-and mapping is, p -> (q,r) which means SLD2 and SLD3 are clustered with SLD1
-	then number of links of clustered hosting infrastructure = p + q + r (Each link will be considered separate) 
+and mapping is, p \-> (q,r) which means SLD2 and SLD3 are clustered with SLD1
+	then number of links of the clustered hosting infrastructure is p + q + r (Links are counted irrespective of their repetitiveness in other SLDs) 
 	
 x = numner of IP addresses served by SLD1
 y = number of IP addresses served by SLD2
-x = number of IP addresses served by SLD3
+z = number of IP addresses served by SLD3
 
-and mapping is, x -> (y,z) which means SLD2 and SLD3 are clustered with SLD1
-	then number of links of clustered hosting infrastructure = set(x,y,z) (This will give the unique bgp prefixes)
+and mapping is, x \-> (y,z) which means SLD2 and SLD3 are clustered with SLD1
+	then number of IP addresses of the clustered hosting infrastructure is set(x,y,z) (Non repetitive IP addresses)
 		
 Let,
 i = numner of bgp prefixes served by SLD1
 j = number of bgp prefixes served by SLD2
 k = number of bgp prefixes served by SLD3
 
-and mapping is, i->(j,k) which means SLD2 and SLD3 are clustered with SLD1
-	then number of BGP prefixes of clustered hosting infrastructure = set(i,j,k) (This will give the unique bgp prefixes)
+and mapping is, i\->(j,k) which means SLD2 and SLD3 are clustered with SLD1
+	then number of BGP prefixes of the clustered hosting infrastructure is set(i,j,k) (Non repetitive bgp prefixes)
 	
 Let,
-a = numner of ASs served by SLD1
+a = number of ASs served by SLD1
 b = number of ASs prefixes served by SLD2
 c = number of ASs prefixes served by SLD3
 
 and mapping is, a->(b,c) which means SLD2 and SLD3 are clustered with SLD1
-	then number of ASNs of clustered hosting infrastructure = set(a,b,c) (This will give the unique ASNs)
+	then number of ASNs of the clustered hosting infrastructure is set(a,b,c) (Non repetitive ASNs)
 
 \end{varwidth}}
 \end{center}
