@@ -1,78 +1,22 @@
-The Internet has changed a lot within last decade both in technical as well as
-in user experience aspects.With increase in Internet users and their demand for
-more and richer content has led to exponential increase of Internet traffic.Social
-networking sites like Facebook, Twitter enable users to publish their own content
-and share with other users.Users also share videos in different social media sites
-like Youtube,Facebook etc.The highly popular on-demand video and streaming
-sites like Netflix etc., are also playing vital role in increasing Internet user base
-and traffic.Recent traffic studies [3,4] show that a large fraction of Internet
-traffic is originated by a small number of prominent infrastructure which can be
-highly distributed content delivery networks (CDNs) like Akamai or content providers like Google.Poese et al. [3] report a similar observation from the traffic of a European Tier-1 carrier. Labovitz et al. [2] infer that more than 10 \% of the total Internet inter-domain
-traffic originates from Google, and Akamai claims to deliver more than 20 \% of
-the total Web traffic in the Internet [5].
+The Internet is the largest network system in the world and is growing even bigger. Recent study shows that, by 2015 there are more than 3 billion active Internet users in the world [2]. With increase in Internet users and their demand for more and more richer content has led to exponential increase of Internet traffic. High resolution videos, graphic-rich multimedia online games, interactive audio and video, high quality audio streaming etc. are contributing in large in upsurge of traffic. Consequently, websites having vast and rich content require different strategies to distribute their content all over the world in order to give their user a good quality of experience.
+  
+Response time on web is a really important matter of concern for many of its users. Longer loading times of websites will result in poor user experience. This will have a severe impact on the digital businesses. It is found out that slow loading websites cost the U.S. e-commerce market more than 500 billion dollar annually [Ref: hostingfacts].  According to E-Commerce and conversion statistics, 40\% of web users abandon a website if it takes more than 3 seconds to load. There are situations where sometimes, a website receives a huge amount of hits, resulting in the need to handle the peak loads. For this reason, these websites host their content using cloud based infrastructure where the required resources can be scaled on-demand. There are some websites that very rich in content. In order to give their users a better experience, they host their content on content delivery networks spread across the globe thus bringing the content close to their users. Some websites build their own dedicated data centers to deliver content, while some others use the content hosted by other content providers. Recent studies suggest that some of these hosting infrastructures such as CDNs, Cloud services and Content providers are responsible for a major fraction of Internet traffic, termed as hyper giants of Internet [3,4].
 
-Traditional hosting model like CDNs are the
-most important technical solutions for providing high performance delivery system till now where popular contents are stored in servers of CDNs .But with the
-increase of content within sites ,it is not possible for the popular web sites to provide better performance to end customers by using only the traditional hosting
-model.Instead ,content providers now build their own global backbones, cable ;
-Internet service providers offer wholesale national transit, and transit ISPs offer
-CDN and cloud / content hosting services.CDNs also build highly distributed
-infrastructures and data centers to replicate the most popular content at different distributed cache servers and locate them at the edge of the network.It help
-them to provide popular content from the nearest server to customers.Hence
-when a user request for a popular web content ,CDN just redirect the user to
-most suitable server by bypassing the saturated links.
+That hyper giants are not usually the main operators of the network but they play vital role in delivery of the content by creating interdependency between them and the main operators by different ways and business needs. The producers of the content (popular websites) want their content to be delivered to end user in less time for which they have to rely on the main operators or hyper giants. Such a scenario cause a large amount of traffic flow from hyper giants as well as huge dependency between popular websites and hyper giants.It is this symbiosis between the
+two parties that motivates our work ,giving an overview on how far the reach of hyper
+giants in todays Internet.
 
-Hence due to this change in content delivering phenomenon some researchers
-termed this companies as hyper giants [7] which include large content providers,
-such as Google and yahoo, as well as highly distributed CDNs like Akamai,big cloud computing CDNs like Amazon aws etc. Most of these hyper giants are operating not only a substantial number of data centers but are also building up their own network. Some networking
-researchers are claiming that, due to the phenomenal growth of hyper giants,
-the topological structure of the Internet must be redrawn to include them, together with the Global transit and backbone networks as part of the Internet
-core,resulting in the topology sketched in Figure 2. This may leave the ISPs as
-dump pipe providers to the consumer.
+Hyper giants build a large infrastructure all around the world to deliver content ensuring a faster response. The websites use these infrastructure to store their content, such as audios ,videos, test/html files etc. Therefore these hyper giants can directly impact the way the web objects are delivered in today's Internet. It is important for the owners of these websites to know the degree to which their web content rely on hyper giants. It is this symbiosis between the two parties that motivates our work ,giving an overview on how far the reach of hyper giants in todays Internet.
 
-Again it is important to understand that hyper giants are not usually the
-main operators of the network but they play vital role in delivery of the content
-by creating interdependency between them and the main operators by different
-ways and business needs. The producers of the content (popular websites) want
-their content to be delivered to end user in less time for which they have
-to rely on the main operators or hyper giants. Such a scenario cause a large
-amount of traffic flow from hyper giants as well as huge dependency between
-popular websites and hyper giants.It is this symbiosis between the two parties
-that motivates our work ,giving an overview on how far the reach of hyper giants
-in todays Internet.
+The Internet architecture is getting complex day by day by how hyper giants work. Therefore it is very important to identify and study their role. In 2010, Craig Labovitz, then of Arbor Networks [2],first time characterized hyper giant. By placing Google in this list, the author described the hyper giant as, a content provider that makes massive investments in bandwidth, storage, and computing capacity to maximize efficiencies and performance. This concept of hyper giants also aligns with Schmidts [8] assertion which talks about ”gang of four” companies which are responsible for the growth and innovation of Internet. Google, Apple, Amazon, and Facebook. Bernhard et al.[9,10] also worked on identifying and mapping the content infrastructure that are hosting the most popular content. The author also purposed a light weight automated technique to discover web content hosting and delivery infrastructure. Palacin et [13] defined hyper giants not
+only content providers, they are basically content aggregators. Small companies started using high speed infrastructures to deliver their content to end users.But with increase of content  these high speed infrastructures started absorbing content from the long tail, entering fully into the niche of the traditional hosting companies.Poses et el[], also 
 
-Again hyper giants now not only provide rich content,they also provide different other services.For example now most of the popular websites having their
-own login systems or login systems which are provided through Google,Twitter,Facebook
-etc.In later case the authentication is verified by Google,Facebook etc.For that
-the popular websites need to embed third party login systems in their websites.Like this there are lot of other services provided by these hyper giants like
-for websites add Google adsense to advertise their products etc.Moreover popular websites need CDNs to store web contents like HTML files,audio files,video files etc. This dependency of popular websites on hyper giants also gives us motivation to check what percentage of these web objects are delivered through hyper giants to popular websites.
-
-A few studies have already investigated about hyper giants and their relationship with popular websites in the recent past.In 2010, Craig Labovitz, then
-of Arbor Networks [2],defined a new type of network entity. By placing google
-in this list,he characterized the hyper giant as a content provider that makes
-massive investments in bandwidth, storage, and computing capacity to maximize efficiencies and performance.The concept of hyper giants also aligns with
-Schmidts [8] assertion which talks about ”gang of four” companies which are responsible for the growth and innovation of Internet. Google, Apple, Amazon,
-and Facebook .Bernhard et al.[9,10] also worked on identifying and mapping the
-content infrastructures that are hosting the most popular content.The author also purposed a light weight automated technique to discover Web content hosting and delivery infrastructures.He identified different types of infrastructures like highly distributed CDNs,CDNs,data centers and hyper giants presence in Internet.Gao et al.[6] analyzed operator interconnections from a more technical perspective.They used a methodology to quantify the type of inter-Autonomous System (AS)relationships that exist in the Internet and classify them into three groups based
-on the state of Border Gateway Protocol (BGP) messages: customer-to-provider,
-peer-to-peer, and sibling-to-sibling relationships.Shavitt and Weinsberg [11] in their paper
-discussed the topological trends of content providers. They create a snapshot
-of the AS-level graph from late 2006 until early 2011, and then analyzed the interconnection trends of the transit and content providers and their implications for the Internet ecosystem. AS graphs are built by traversing IP trace routes and resolving each IP address to its corresponding AS.Shavitt and Weinsberg also found that large content providers like Google, Yahoo!, Microsoft,Facebook, and Amazon have increased their connectivity degree during the observed period and are becoming key players in the Internet ecosystem, strengthening the
-idea that the Internet is becoming flatter.Palacin et [13] defined hyper giants not
-only content providers, they are basically content aggregators. Small companies started using high speed infrastructures to deliver their content to end users.But with increase of content  these high speed infrastructures started absorbing content from the
-long tail, entering fully into the niche of the traditional hosting companies.
-
-By end of this thesis we are able to give answers for some of the important
-research questions which can be summarized as follows:
+By end of this thesis we are able to provide answers for some of the important research questions which can be summarized as follows:
 
 \begin{itemize}
 \item Identification of hosting infrastructures: We propose a lightweight and
 fully automated approach to discover hyper giants such as highly distributed
 content delivery networks,content providers etc.
-
-\item Classification of hosting infrastructures: We classify individual hosting
-infrastructures and their different deployment strategies based on their
-network.
 
 \item Web content dependency: We quantify the degree of content dependency
 of the popular websites on hyper giants by analyzing different web objects like text files,image files,application files delivered by hyper giants to popular web sites.
