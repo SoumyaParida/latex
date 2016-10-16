@@ -1,126 +1,119 @@
-In this chapter,we discuss how Internet architecture evolved with time.Along with this we will discuss briefly on hyper giants.In addition to this we also provide the technical background of DNS and HTTP protocol which will be used in this thesis.
-This chapter gives an over view of evolution of Internet architecture with time. 
+\section{Background\label{cha:chapter2}}
 
-The Internet architecture is getting complex with time with introduction of hyper giants. Therefore it is very important to identify them and study their role in Internet. In 2010, Craig Labovitz, then of Arbor Networks [2],first time characterized hyper giant. By placing Google in this list, the author described the hyper giant as, a content provider that makes massive investments in bandwidth, storage, and computing capacity to maximize efficiencies and performance. It is also found that the traffic amount sent by hyper giants is about 30\% of the whole amount across the Internet. This concept of hyper giants also aligns with Schmidts [8] assertion which talks about ”gang of four” companies which are responsible for the growth and innovation of Internet. Google, Apple, Amazon, and Facebook.In [check], Shavitt and Weinsberg analyzed changes in topological structure, such as betweenness centrality and link density, by focusing on large content providers, also referred to as hyper Giants [14, 21]. They create a snapshot of the AS-level graph from late 2006 until early 2011, and then analyze the interconnection trends of the transit and content providers and their implications for the Internet ecosystem. AS graphs are built by traversing IP traceroutes 9 and resolving each IP address to its corresponding AS. Shavitt and Weinsberg proved that large content providers like Google, Yahoo!, Microsoft, Facebook, and Amazon have increased their connectivity degree during the observed period and are becoming key players in the Internet ecosystem, strengthening the idea that the Internet is becoming flatter.From this analysis, it was found that the structure of the Internet topology has changed from a hierarchical to a flat structure. This is because large content providers construct links with a lot of small ISPs. 
-Unfortunately all the above studies are carried out by accessing the Internet traffic passing through different ASs ,not traffic delivered by local ISP.Bernhard et al.[9,10] also worked on identifying and mapping the content infrastructure that are hosting the most popular content.Based on DNS measurements and BGP routing table snapshots, the author purposes a approach to discover hosting infrastructures. Poses et el[],  Palacin et [13] defined hyper giants not only content providers, they are basically content aggregators. Small companies started using high speed infrastructures to deliver their content to end users.But with increase of content  these high speed infrastructures started absorbing content from the long tail, entering fully into the niche of the traditional hosting companies.
+\noindent This chapter gives an overview of the Internet architecture, describes the functionality of each of its elements, with the focus on the role of hyper giants in today's Internet. Different studies related to hyper giants are discussed. Finally, the technical background to Domain name system (DNS) and hypertext transfer protocol (HTTP) that are needed to carried out the required  study in this thesis are explained briefly.\\
 
+\subsection{Related studies\label{sec:related}}
+\noindent The Internet architecture is getting complex with time with introduction of hyper giants. Therefore it is very important to identify them and study their role in Internet. In 2010, Craig Labovitz, then of Arbor Networks \cite{Labovitz}, first time characterized hyper giant. By placing Google in this list, the author described the hyper giant as, a content provider that makes massive investments in bandwidth, storage, and computing capacity to maximize efficiencies and performance. It is also found that the traffic amount sent by hyper giants is about 30\% of the whole amount across the Internet. This concept of hyper giants also aligns with Schmidts \cite{Schonfeld} assertion which talks about ”gang of four” companies which are responsible for the growth and innovation of Internet. Google, Apple, Amazon, and Facebook. In \cite{Shavitt}, Shavitt and Weinsberg analyzed changes in topological structure, such as betweenness centrality and link density, by focusing on large content providers, also referred to as hyper giants \cite{Labovitz} \cite{Poese}. They create a snapshot of the AS-level graph from late 2006 until early 2011, and then analyze the interconnection trends of the transit and content providers and their implications for the Internet ecosystem. Shavitt and Weinsberg proved that large content providers like Google, Yahoo!, Microsoft, Facebook, and Amazon have increased their connectivity degree during the observed period and are becoming key players in the Internet ecosystem, strengthening the idea that the Internet is becoming flatter. From this analysis, it was found that the structure of the Internet topology has changed from a hierarchical to a flat structure. This is because large content providers construct links with a lot of small ISPs. Unfortunately all the above studies are carried out by accessing the Internet traffic passing through different ASs, not from end user.
 
-  
-\subsection{Evolution of Internet Architecture and Rise of hyper giants}
-In 2010, Craig Labovitz, then of Arbor Networks [2],defined a new type of network entity he argued transcended traditional "content versus carrier” dichotomy of Internet architecture.By placing Google in this list,he characterized the hyper giant as a content provider that makes massive investments in bandwidth, storage, and computing capacity to maximize efficiencies and performance.The concept of hyper giants also aligns with Schmidt’s assertion which talks about "gang of four" companies which are responsible for the growth and innovation of Internet. Google, Apple, Amazon, and Facebook [8].
+\subsection{Evolution of Internet Architecture and Rise of hyper giants\label{sec:archi}}
+\noindent The Internet architecture implemented until the early 2000s was based on a multi-tier hierarchical structure. Tier-1 ISPs were on top of the hierarchy followed by the Tier-2 regional ISPs and the Access ISPs at the lower part of the hierarchy connecting the end users.Tier-1 were highly connected to other ISPs and offered transit services to other ISPs in lower layers. Content was distributed through Access ISPs or, in the best cases, through ISPs located at advantageous points. Traffic flows were required to go up and then down in the hierarchy to reach end users shown in Figure \ref{fig:interArchiOld}. Among different network operators, Internet traffic was exchanged at different IP exchange points according to agreements between different layer players where the dissymmetry in traffic was compensated \cite{Krishnan1} \cite{Bernhard} \cite{Ager}. \\
 
-The Internet architecture implemented until the early 2000s was based on a multi-tier hierarchic structure.Tier 1 ISPs were on top of the hierarchy followed by the Tier 2 regional ISPs and the Access ISPs at the lower part of the hierarchy connecting the end users. In this scheme, Tier 1 ISPs were highly connected to other ISPs and offered transit services to other ISPs in lower layers.Content was distributed through Access ISPs or, in the best cases, through ISPs located at advantageous points. Traffic flows were required to go up and then down in the hierarchy to reach end users shown in figure 1.Among the different network operators,Internet traffic was exchanged at different IP exchange points according to agreements between different layer players where the dis symmetry in traffic was compensated.
-
-\begin{figure}[h]
-\includegraphics[width=\textwidth,height=10cm]{/home/sakib/soumya/latexNew/latex/internetArchiOld.png}
-\centering
-\caption{Traditional Hierarchic Internet Structure}
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=14cm]{/home/sakib/soumya/latexNew/latex/internetArchiOld.png}\\
+  \caption{Traditional Hierarchic Internet Structure}
+  \label{fig:interArchiOld}
 \end{figure}
 
-\begin{figure}[h]
-\includegraphics[width=\textwidth,height=10cm]{/home/sakib/soumya/latexNew/latex/archiNew.png}
-\centering
-\caption{Modern Internet Structure}
+\noindent It can be observed from Figure \ref{fig:interArchiOld}, Tier-1 operators are at top of this hierarchy. Tier-1 network is normally a transit free network that peers with every other Tier-1 network operators. Hence they treat each other equally. While most of the Tier-1 operators offers global coverage, there are some which restricted geographically. Tier-2 ISP is a customer of Tier-1 operators and pays to Tier-1 operators for connectivity to rest of the Internet. They connect to one or more Tier-1 operators, possibly to other Tier-2 operators. Below to the Tier-2 ISPs are local ISPs and Tier-3 ISPs which are connected to the end users. These network operators are customers of the higher Tier ISPs and pays transit fees to connect to the rest of the Internet. In Figure \ref{fig:interArchiOld}, it can be observed that the content hosted in Access ISP A must be passed through different level of hierarchical structure to reach Access ISP D. The content from Access ISP A has to transmit up first to Tier-2 A network operator which forwards content to Tier-1 A operator. Tier-1 A operator and Tier-1 B operator peer with each operator. Tier-1 B operator then transmit it down to Tier-2 C operator which forwards it to Access ISP D operator. Hence the content has to transmit up and down to reach the destination.
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=14cm]{/home/sakib/soumya/latexNew/latex/archiNew.png}\\
+  \caption{Modern Internet Structure}
+  \label{fig:interArchiNew}
 \end{figure}
 
-But with the time,the Internet architecture has changed.Researchers found that now nobody has control over Internet ,instead each ISP has control over its network and depend upon the network connected with it.Even during last decade the old pyramidal structure of Internet architecture shown in figure-2 has been bypassed by big content providers, such as Google, Facebook, Amazon or Yahoo!, and content delivery network operators, such as Akamai.As a result now Internet's backbone has a flatter structure where there are few autonomous systems are playing major role in delivering content.They are connected to each other and have a big footprint by establishing small data centers all over the world.This help them to get as close as possible to the access networks used by their customers,bypassing intermediate Internet service providers.The trend towards flatter network architectures can also be found in the area of access networks.The researchers termed these infrastructure providers as “Hyper Giants” which include large content providers, such as Google and Yahoo, as well as highly distributed CDNs, like Akamai.
+\clearpage
 
-\subsection{Content delivery Infrastructures}
-Recent traffic studies [3, 14] show that a large fraction of Internet traffic is due
-to content delivery  and it originated by very few content delivery infrastructure (CDIs).Major CDIs include content delivery networks like Akamai,Cloudflare, content providers like Google,Microsoft,highly popular rich media sites like Youtube,Netflix and cloud computing infrastructures like Amazon aws.Most of the CDIs have a large number of servers which located across the world.CDIs cache most of the popular content of the websites at these servers.Hence we a end user request for any content,CDIs deliver the content from the server nearest to the end user.In this way CDIs reduce the load on origin servers and at the same time improve performance for the user. CDIs follow different strategies for redirecting traffic to nearest cache server of the end user.Most of the CDIs use DNS to translate the host name
-of a web site request into the IP address of an server.During this translation ,DNS takes into account the location to the end user,the location of the nearest CDIs cache server ,load of the server etc.
+\noindent But with the time, the Internet architecture has changed. Researchers found that now nobody has control over Internet, instead each ISP has control over its network and depend upon the network connected with it. Even during last decade the old pyramidal structure of Internet architecture shown in Figure \ref{fig:interArchiOld}, has been bypassed by big content providers, such as Google, Facebook, Amazon or Yahoo!, and content delivery network operators, such as Akamai. As a result now Internet's backbone has a flatter structure where there are few autonomous systems are playing major role in delivering content. They are connected to each other and have a big footprint by establishing small data centers all over the world. This helps them to get as close as possible to the access networks used by their customers, bypassing intermediate Internet service providers. The trend towards flatter network architectures can also be found in the area of access networks. In Figure \ref{fig:interArchiNew}, it can be observed that content hosted in ISP1 “bypass the network” and easily reach the end users thanks to direct and faster connections. This bypass means improved in network performance in delivering content to the end user and, at the same time,  it optimizes network resources by using cache servers near to the end user. The researchers termed these infrastructure providers as “hyper giants” which include large content providers, such as Google and Yahoo, as well as highly distributed CDNs, like Akamai. Hyper giants construct peering links with different autonomous systems (ASs). In this way, they are able to reduce the transit cost of traffic traversing through large ISPs and able to serve content in a faster way.
 
-Independent CDIs are normally referred to as CDNs.CDNs have a large number of servers all around the world and mainly responsible for delivering content of their customers to end users.Leighton [1] proposes four main approaches to distributing content in a content-delivery architecture: (i) centralized hosting,(ii) big data center based CDNs, (iii) highly distributed CDNs, and (iv) peer-to-peer networks.In centralized hosting case ,traditional architectures sites take help of one or small number of collocation sites to host their content.These centralized
-hosting structures are may be enough for small content sites but not for popular websites which carries huge amount of content.Big Data Center content
-delivery networks have Hugh number of high-capacity data centers which are
-connected to major backbones.Highly popular content are cached.Hence able to
-increase the performance of delivery compare to centralized hosting infrastructures 
-but still are limited in potential improvements as still they are far away
-from the end user.Third type of model is highly distributed content delivery 
-networks.They have high footprint all over the world.By putting their own
-infrastructures inside end user's ISP,they are able to eliminating peering, 
-connectivity, routing, and distance problems, and reducing the number of Internet
-components.Final approach is peer to peer networks which has very little scope
-in delivering the content of popular websites in today's Internet world due to
-serious concern of the copy right issues.
+\subsection{Domain name System (DNS)}
+\noindent Domain name system (DNS) is used to translate IP address to corresponding
+host names. Internally it is maintaining a hierarchal structure of domains. The administration of domains is divided into different zones. The zone information is distributed using authoritative name servers. The top most level of DNS starts with root zone. The root zone of the DNS
+system is centrally administered and serves its zone information via a collection of
+root servers. The root servers delegates responsibility for specific zones to some other authoritative name servers which in turn divided responsibility with other authoritative name server. At the end, each site is responsible for its own zone and keep maintain its own database of authoritative name server. The information about a particular domain of a zone is kept in Resource Records (RRs) which specify the class and type of the record as well as the data describing it. Multiple RRs with the same name, type and class are called a resource record set (RRset) \cite {Frank} \cite{Mike4}.\\
 
-Cloud infrastructure refers to the hardware and software components, such as servers, storage, networking and virtualization software that are needed to support the computing requirements of a cloud computing model. In addition cloud computing infrastructures include a software abstraction level which virtualizes resources like servers, compute, memory, network switches, firewalls, load balancers and storage. and logically presents them to users through programmatic means.Cloud infrastructure mainly present three different types of model:infrastructure as a service (IaaS), platform as a service (PaaS) and software as a service (SaaS).Cloud infrastructures deploy a large number of data centers at certain regions of the world.In case of infrastructure as service or IaaS,cloud infrastructures give access to these data centers to their users.Users can able to access and manage remote data center infrastructures, such as compute (virtualized or bare metal), storage, networking, and networking services (e.g. firewalls).SaaS uses the web to deliver applications that are managed by a third-party vendor and whose interface is accessed on the client's side.Popular SaaS offering types include email and collaboration, customer relationship management, and health care-related applications. Paas is used for applications, and other development, while providing cloud components to software. With this technology,users can manage OSes, virtualization, servers, storage, networking, and the PaaS software itself.
+\noindent To resolve a host name to IP address, the procedure starts with the end
+user’s stub resolver queries to local name server called caching server. If the caching
+server can not able to resolve it, it redirects the query to authoritative name server
+of the domain. If resolver does not know how to contact the corresponding authoritative name server of the domain, it redirects the query to root name server. The root name server again refers the resolver to the authoritative name server responsible for the domain just below the root server. This procedure continues till resolver is able to resolve the domain properly.\\
 
-Content Providers also are major player in content delivery infrastructure.Companies like Google, Facebook, Netflix etc. build their own infrastructures like data centers and interconnected them with high speed backbone networks to deliver some of their very popular services.Google connects its data centers to a large number of ISPs via IXPs and also via private peering [15].Google also now provide Google Global Cache (GGC) [16] as a service where customers can  optimize network infrastructure costs associated with delivering Google and YouTube content to end users by serving this content from inside their ISP networks.Through GGC,small ISPs and which are located in areas with limited connectivity can reduced the transit cost as well as websites can deliver their content with better performance.GGC also allows an ISP to advertise through BGP the prefixes of users that each GGC server should serve.The Netflix system known as Open Connect Network[17].Netfix deploy its own infrastructure inside a lot of ISPs by partnering with them to deliver its own content more efficiently. 
- 
-\subsection{Protocols}
-In this section we will discuss about the protocols used in this thesis which
-are domain name system (DNS) and hyper text transfer protocol (HTTP).Both
-protocols used in out thesis extensively to get CNAMEs of a website and to get the http header information respectively.
-\subsubsection{Domain name System (DNS)}
-Domain name system (DNS) is used to translate IP address to corresponding
-host names.Internally it is maintaining a hierarchal structure of domains.Before
-the invention of DNS on year 1983,a simple text file (hosts.txt) file was used to
-do this translation from IP address to host name.But with a growing number of host names it was difficult to keep maintain in hosts.txt file and Domain name
-system introduced.
+\noindent A top-level domain (TLD) is one of the domains at the highest level in the hierarchical Domain Name System of the Internet \cite{dns}. The top-level domain names are installed in the root zone of the name space. For all domains in lower levels, it is the last part of the domain name, that is, the last label of a fully qualified domain name. For example, in the domain name www.example.com, the top-level domain is \enquote{.com}. In the Domain Name System (DNS) hierarchy, a second-level domain (SLD) is a domain that is directly below a top-level domain (TLD). Second level domain normally refers to the organization name that registered the domain name with a domain name registrar.\\
 
-The administration of domains is divided into different zones. The zone
-information is distributed using authoritative name servers.The top most level
-of DNS starts with root zone and the root zone information is served by root
-servers.Responsibility of specific parts of zone can be given to some other authoritative name servers which in turn divided responsibility with other authoritative
-name server.For, e.g.,the responsibility of .org domain is delegates to the Pub-
-lic Interest Registry by the root zone which in turn delegates responsibility for
-acm.org to the Association for Computing Machinery (ACM).At the end its site
-is responsible for its own zone and keep maintain its own database of authoritative name server.The information about a particular domain of a zone is kept in
-Resource Records (RRs) which specify the class and type of the record as well
-as the data describing it.Multiple RRs with the same name, type and class are
-called a resource record set (RRset).
+\noindent Listing \ref{lst:listing1} shows the DNS reply by the resolver when querying 
+the host name \enquote{www.bmw.com}.\\\\
 
-To resolve a IP address into host name,the procedure starts with the end
-user’s stub resolver queries to local name server called caching server.if caching
-server can not able to resolve it,it redirects the query to authoritative name server
-of the domain.If resolver does not know how to contact the corresponding authoritative name server of the domain,it redirects the query to root name server
-.The root name server again refers the resolver to the authoritative name server
-responsible for the domain just below the root server.This procedure continues
-till resolver is able to resolve the domain properly.
+\begin{lstlisting}[caption= DNS Reply for a host using dig command line tool, label=lst:listing1]
 
-\begin{figure}[h]
-\includegraphics[width=\textwidth,height=10cm]{/home/sakib/soumya/wholeSLD/dnsBmw.png}
-\centering
-\caption{DNS Reply for a host using dig command line tool}
-\end{figure}
+; <<>> DiG 9.10.3-P4-Ubuntu <<>> www.bmw.com
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 60134
+;; flags: qr rd ra; QUERY: 1, ANSWER: 4, AUTHORITY: 0, ADDITIONAL: 1
 
-Figure-3 shows the DNS reply by the resolver when querying a host name
-served by a content infrastructure.Here the host name is www.bmw.com.The
-answer section contain a chain of CNAMEs which resolve into two ARecord set
-(RRset) with different IP addresses which can be for used for load balancing.
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 512
+;; QUESTION SECTION:
+;www.bmw.com.			IN	A
 
-\subsubsection{Hyper text transfer protocol(HTTP)}
-Hyper text transfer protocol (HTTP) is an application layer protocol mainly used
-as defector standard to transport content in world wide web.HTTP works on top
-of the TCP/IP protocol and follows the client server architecture via request-response communication procedure.It allows end-users to request, modify, add or delete resources identified by Uniform Resource Identifiers (URIs).
+;; ANSWER SECTION:
+www.bmw.com.		3600	IN	CNAME	cn-www.bmw.com.edgesuite.net.
+cn-www.bmw.com.edgesuite.net. 3600 IN	CNAME	a1586.b.akamai.net.
+a1586.b.akamai.net.	20	IN	A	104.121.76.64
+a1586.b.akamai.net.	20	IN	A	104.121.76.49
 
-\begin{figure}[h]
-\includegraphics[width=\textwidth,height=10cm]{/home/sakib/soumya/wholeSLD/httpRequestResponse.png}
-\centering
-\caption{HTTP Request (top) and Response (down) for example.com}
-\end{figure}
+;; Query time: 22 msec
+;; SERVER: 127.0.1.1#53(127.0.1.1)
+;; WHEN: Fri Oct 14 09:46:54 CEST 2016
+;; MSG SIZE  rcvd: 143
+\end{lstlisting}
 
-HTTP message consists of HTTP header which shows the meaning of message
-and HTTP body which is actual message.HTTP message can be a request message
-or response message.The HTTP client sends a request message to server .There are
-different types of methods used in HTTP request message like GET,HEAD,POST
-,PUT,DELETE,CONNECT etc.But in this thesis we have used extensible GET
-method and the HEAD method.The GET method is used to retrieve information
-from the given server using a given URI. Requests using GET should only
-retrieve data and should have no other effect on the data.Same as GET, but
-it transfers the status line and the header section only.The introductory line in
-an HTTP request shown in figure 4 consists of a method, a server-side path, and the
-HTTP version in use.The introductory line in an HTTP response shown in figure 4
-starts out with the HTTP version in use, followed by a standardized three-digit
-status code and a textual status description. The status code tells the requester
-about the success of the query or indicates the reason of an error.Both request and response messages are followed by multiple header lines.Some header information are valid for request
-,some are for response and some are valid in both the ways.Since HTTP1.1,the
-Host header is mandatory for request messages.The meta information encompasses information about the file type, the character set in use, preferred language etc.HTTP also allows server to set cookies in client side which help the server to track client requests.
+
+
+\noindent There are many types of resource records, the most common being A (which gives an IPv4 address for a host name), AAAA (which gives an IPv6 address), MX (which sets the location of a mail server), CNAME (or canonical name, which maps one NAME to another), and TXT (which can include any arbitrary text). In Listing \ref{lst:listing1}, it can be observed that, the host name is \enquote{www.bmw.com}. The answer section contain a chain of CNAMEs \enquote{cn-www.bmw.com.edgesuite.net} and \enquote{a1586.b.akamai.net} which resolve into same ARecord set (RRset) with different IP addresses 104.121.76.64 and 104.121.76.49. The host infrastructure correspond to final IP address is normally refer to as ARecord name. In Listing \ref{lst:listing1}, \enquote{a1586.b.akamai.net} is the ARecord name for both the IP addresses  104.121.76.64 and  104.121.76.49.\\
+
+\subsection{Hyper text transfer protocol(HTTP)}
+\noindent Hyper text transfer protocol (HTTP) \cite{RISTOL} \cite{RISTOL1} is an application layer protocol mainly used as defector standard to transport content in world wide web. HTTP works on top
+of the TCP/IP protocol and follows the client server architecture via request-response communication procedure. It allows end-users to request, modify, add or delete resources identified by uniform resource identifiers (URIs).\\
+
+\noindent HTTP message consists of HTTP header which shows the meaning of message and HTTP body which is actual message. HTTP message can be a request message or response message. Both types of message consist of a start-line, zero or more header fields (also known as "headers"), an empty line (i.e., a line with nothing preceding the CRLF) indicating the end of the header fields, and possibly a message-body.\\
+
+\noindent The HTTP client sends a request message to server. There are different types of methods used in HTTP request message like GET, HEAD, POST , PUT ,DELETE, TRACE etc. But in this thesis we have used extensible GET method and the HEAD method. HTTP defines these methods to indicate the desired action to be performed on the identified resource.The GET method is used to retrieve information
+from the given server using a given URI. Requests using GET should only retrieve data and should have no other effect on the data. The HEAD method request for a response identical to that of a GET request but without the response body.The head method transfers the status line and the header section only. The POST method requests the origin server accept the entity enclosed in the request as a new subordinate of the resource identified by the Request-URI in the Request-Line. The actual function performed by the POST method is determined by the server and is usually dependent on the Request-URI. The PUT method requests that the enclosed entity be stored under the supplied Request-URI. If Request-URI refers to an existing resource, then the enclosed entity is considered as the modified resource. The DELETE method requests that the origin server delete the resource identified by the Request-URI. TRACE allows the client to see what is being received at the other end of the request chain and use that data for testing or diagnostic information.\\\
+
+\begin{lstlisting}[caption= HTTP Get Request message, label=lst:Get]
+GET / HTTP/1.1
+Host: www.example.com
+User-Agent: Mozilla/5.0 [...]
+Accept: text/html [...]
+Accept-Language: en-us
+Accept-Encoding: gzip,deflate
+Connection: Keep-alive
+\end{lstlisting}
+
+\noindent Listing \ref{lst:Get} shows HTTP Get request message sample for host \enquote{www.example.com}. The introductory line in an HTTP request message consists of method, a server-side path, and the HTTP version in use. \\\
+
+\begin{lstlisting}[caption= HTTP Response message, label=lst:response]
+HTTP/1.1 200 OK
+Accept-Ranges: bytes
+Content-Type: text/html
+Date: Mon, 27 Jul 2009 12:28:53 GMT
+Server: Apache/2.2.14 (Win32)
+Last-Modified: Wed,22 Jul 2009 19:15:56 GMT
+Content-Length: 88
+<!doctype html>
+<html>
+[...] 
+\end{lstlisting}
+
+\noindent Listing \ref{lst:response} shows HTTP response message sample for host \enquote{www.example.com}. The introductory line in an HTTP response starts out with the HTTP version in use, followed by a standardized three-digit status code and a textual status description. The status code tells the requester about the success of the query or indicates the reason of an error. \\
+
+\noindent Both request and response messages are followed by multiple header lines. Some header information are valid for request, some are for response and some are valid in both the ways. Since HTTP1.1, the host header is mandatory for request messages. The meta information encompasses information about the file type, the character set in use, preferred language etc. HTTP also allows server to set cookies in client side which help the server to track client requests.\\
 
 \subsection{Conclusion}
-
-Within last decade the Internet architecture changed vastly due to the introduction of hyper giants which can be highly distributed CDNs,cloud computing
-CDNs etc.Todays Internet traffic is dominated by HTTP traffic.Again to deliver
-the content fast ,DNS protocol is used as the load balancing mechanism by these
-big hyper giants.
+\noindent Within last decade the Internet architecture changed vastly due to the introduction of hyper giants which can be highly distributed CDNs, cloud computing
+CDNs etc. Todays Internet traffic is dominated by HTTP traffic. Furthermore, to deliver
+the content fast, DNS protocol is used as the load balancing mechanism by these
+big hyper giants. DNS  acts as entry point for the end users to connect to hosting infrastructure. Hence it is ideal to carry out the study to analyze the hyper giants using the DNS.
+\clearpage

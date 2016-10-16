@@ -1,123 +1,159 @@
-This chapter analyzes the measurements obtained from chapter 5 to identify hyper giants by studying the features of clustered hosting infrastructure such as number of links served by the cluster, number of IP addresses that belong to the cluster, number of BGP prefixes to reach the cluster, number of AS numbers that belong to cluster. Once hyper giants are determined, the dependency of popular websites on them will be examined by taking into consideration that the type of web objects like images, videos, HTML files etc delivered by these hyper giants. 
+\section{Results\label{cha:chapter6}}
+\noindent This chapter analyzes the measurements obtained from chapter \ref{cha:chapter5} to identify hyper giants by studying the features of clustered hosting infrastructure such as number of links, number of IP addresses,  number of BGP prefixes, number of AS numbers that belong to cluster. Once hyper giants are determined, the dependency of popular websites on them will be examined by analyzing the type of web objects like images, videos, HTML files etc. they deliver.\\
 
-\subsubsection{Identifying hyper giants}
+\subsection{Identifying hyper giants}
+\noindent This section analyses the 3205 clustered hosting infrastructures using their feature set to identify if there are any hyper giants. The hosting infrastructure that has unique features can be used to classify them as  hyper giants. Hence some mining technique has to be applied to separate the hyper giants from the rest of the hosting infrastructure. For this purpose, k-means clustering is used to separate infrastructure into different clusters each having it's own characteristics. Furthermore, these clusters are analyzed to identify if any of their characteristics can qualify them to be treated as hyper giants.\\ 
 
-\subsubsection{case 1 :number of Links Vs number of IP addresses}
-In this section we will take the top 3205 SLD infrastructures and cluster them based on their number of links to ip addresses they served.
+\noindent K-means algorithm uses, the number of links hosted by each hosting infrastructure and the number of IP addresses each hosting infrastructure contain as it's inputs. The k-means algorithm clusters the given 3205 hosting infrastructure. The value of of k=10 is chosen as a clustering parameter as it gave clusters with unique characteristics. The following graph as shown in Figure \ref{fig:cluster} represents the distribution of hosting infrastructure into clusters, which is obtained using k-means algorithm.\\
 
-\begin{figure}[h]
-\includegraphics[width=\textwidth,height=10cm]{/home/sakib/soumya/wholeSLD/Rplot.png}
-\centering
-\caption{Clustering based on links and IP address features}
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=14cm]{/home/sakib/soumya/wholeSLD/Rplot.png}\\
+  \caption{Distribution of hosting infrastructure into clusters}
+  \label{fig:cluster}
 \end{figure}
 
-We used k-means clustering algorithm and number of cluster parameter 10.We found 6 different clusters which are clubbed total 26 SLD infrastructures and showing unique behavior.Like cloudflare.net is clustered separately as it is serving very huge number of links as well as having very high number of ip addresses.It means lots of small SLDs are serving through cloudflare.net and it has footprint all over the world.Similarly us-east-1.elb.amazonaws.com clustered separately as it has less high of links but serving a high number of ip addresses.third cluster contain google.com which is serving high number of links but not very high number of ip addresses.In this way we are able to identify total 6 clusters which resulted in a total of 26 SLD infrastructures. But it is difficult to categorize them into some specific type of infrastructure based on only  links to ip address analysis. Hence these 26 SLD infrastructures will be further analyses taking into account their prefixes to their asn numbers.
+\noindent The details of the 10 clusters mined from the 3205 hosting infrastructure that we considered for analysis are categorized into 10 clusters using k-means, whose information is tabulated in Table \ref{tab:top10}.\\\
 
-\subsubsection{case 2 :number of BGP Prefixes Vs number of ASNs}
-From last section we identify the SLD infrastructures which are having unique behavior. But we couldn't able to classify them .Therefore in this step we will check how they are distributed all other world.This requires these clusters to be analyzed using their corresponding ASN to prefix numbers.This is because number of ip prefixes shows the footprint of the infrastructures across the world and the number of asn numbers show the degree of distribution of infrastructures across the world.
-\begin{figure}[h]
-\includegraphics[width=\textwidth,height=10cm]{/home/sakib/soumya/wholeSLD/prefixVsasn.png}
+\begin{table}[htb]
 \centering
-\caption{Classification of hyper giants}
-\end{figure}
-
-From figure-14 ,we can cluster all the clustered SLD infrastructures into 5 parts based on their <number of prefixes,number of ASNs> analysis as below.
-
-\begin{itemize}
-\item very high,very high :
-In total 3 different clustered SLD infrastructures are clustered under this.
-They are yunjiasu-cdn.net,jiashule.com,
-us-east-1.elb.amazonaws.com.These three SLD infrastructures contain very high number of prefixes as well as they have high number of ASN numbers,which shows that they have footprint all over the world  as well as they are distributed across the world.We can classify them as highly distributed CDNs.
-\item high,high : 
-Total 7 SLD infrastructures clubbed inside this. wpengine.com
-,alikunlun.com,cloudflare.net,ourwebpic.com,
-us-west-2.elb.amazonaws.com,eu-west-1.elb.amazonaws.com and 
-ap-northeast-1.elb.amazonaws.com.They have high number of footprint and high number of asn numbers.This shows they have presence in few of the regions.We can classify them as distributed CDNs.
-\item high,less  :
-netdns-cdn.com and cdntip.com
-These SLD infrastructures have high number of prefixes but have less number of ASN numbers.It means they have footprint all over the region but they normally administered through very few ASN numbers.Hence these can be categorized into cloud computing infrastructures. 
-\item  medium,medium :
-Five different SLD infrastructures are clubbed into same cluster.They are,
-akamaiedge.net,ap-southeast-1.elb.amazonaws.com,
-kxcdn.com,incapdns.net,d2t8dj4tr3q9od.cloudfront.net
- All these infrastructures have few prefixes and they also not distributed which gives an evidence of multi homes data centers or web hosting companies.
-\item less,less :
-The rest of the CDN infrastructures are clubbed into same cluster which having very few number of prefixes also very few number of IP addresses.Hence they can be treated as content providers.Google and Microsoft both clustered under this.
-\end{itemize}
-
-\pagebreak
-\subsubsection{Conclusion}
-From the above section,we are able to identify total 26 hyper giants which are having influence in Europe region.They are highly distributed CDNs,cloud platforms,CDNs,content producers etc.In next section we will see how they influence on number of objects delivered by them.
-
-\subsection{Popular websites dependency on hyper giants}
-In this section,first we will see different types of objects delivered through 219604 unique SLDs and compare this with web objects delivered by 26 hyper giants. Then we will examine each hyper giant separately and try to find what kind of data object they deliver. 
-\subsubsection{Object types delivery through whole SLD infrastructures Vs hyper giants}
-\begin{figure}[h]
-\includegraphics[width=\textwidth,height=10cm]{/home/sakib/soumya/wholeSLD/objectCount.png}
-\centering
-\caption{top 10 object percentage used by all SLDs}
-\end{figure}
-\begin{figure}[h]
-\includegraphics[width=\textwidth,height=10cm]{/home/sakib/soumya/wholeSLD/objectCount/hypergiant.png}
-\centering
-\caption{top 10 object percentage used by all hyper giants}
-\end{figure}
-
-Figure-15 and figure-16 shows top 10 object types in terms of their percentage of the total web objects they served .In case of hyper giants top 10 object types deliver almost 98.82 \% of the total object types they host. It can be inferred from the graph that hyper giants host 68.27\% of HTML object type making it the single highest contributor to the total web objects it hosts. 
-
-
-Furthermore, 75.04\% of the total object types it hosts are of text object type such as text/html,text/css,text/xml,text/js etc. Furthermore, 18\% of the total object types it hosts are of image object type such as image/png and image/jpeg. 
-
-, are delivered through hyper giants where as only 19.29\% of image files delivered through hyper giants.
-
-
-
-In case of SLDs,top 10 object types carries almost 97.94\% of all object types  which is very much similar to the percentage of objects delivered by hyper giants.The highest web object type delivered through all SLDs as well as hyper giants is text/html but it can be observed that in case of all SLDs,text/html carries almost 38\% of all web objects which is around 68.27\% in case of delivering through hyper giants.In case of all SLDs ,object types are distributed properly.If we add image/jpeg,image/png,image/gif then all SLDs serve more image files than HTML files.But same is not the case for hyper giants.Similarly it can be seen that almost 46.77\% of text files delivered through whole sld set which is almost 1.5 times more in case of hyper giants.But in case of image files ,SLDs serve almost 42 \% of all web objects which is almost double the image files served through hyper giants.This different behavior might be because popular content websites normally store more dynamic files in CDNs where as in case of image files they store at their own servers.
-
-\subsubsection{Object types delivered from hyper giants to popular web sites}
-In this section we will see what kind of data mostly delivered through the identified hyper giants.In today's Internet ,content plays most vital role.Hence it is important to observe what kind of data mostly delivered through hyper giants .
-\newline
-\newline
-\begin{tabular}{ |p{6cm}||p{2cm}|p{2cm}|p{2cm}| }
+\begin{tabular}[t]{|p{.1\textwidth}|p{.2\textwidth}||p{.3\textwidth}|}
+\hline
+ cluster No.& No. of hosting infrastructure&Link density of cluster\\
  \hline
- \multicolumn{4}{|c|}{Hyper giant Object List} \\
- \hline
- Country Name     & text&image&application\\
- \hline
- alikunlun.com   & 75.99    &20.32&   3.65 \\
-d2t8dj4tr3q9od.cloudfront.net&   49.86  & 41.10   &8.68\\
- ap-northeast-1.elb.amazonaws.com &90.28 & 6.23&  3.44\\
- ap-southeast-1.elb.amazonaws.com    &87.94 & 7.36&  4.62\\
- cdntip.com&   87.94  & 7.36&1.67\\
- d5nxst8fruw4z.cloudfront.net& 31.90  & 57.42   &10.23\\
- eu-west-1.elb.amazonaws.com& 87.25  & 7.32&5.39\\
- fastlylb& 69.79  &21.30&8.69\\
- google.com&82.54  & 15.79&1.65\\
- jiashule.com& 88.85  & 8.33&2.80\\
- kxcdn.com& 75.62  & 17.98&6.34\\
-pbwstatic.com& 83.18  &16.57&0.24\\ 
- akamaiedge.net&73.65  & 20.35&5.93\\ 
- anycast.me& 79.64  & 14.90&5.37\\
- cloudflare.net& 64.86  & 11.98&23.12\\
- cloudflare.com& 78.15  & 15.62&1.70\\ 
-dynect.net& 94.53  & 3.74&3.74\\
- edgecastcdn.net& 53.23 & 38.44&8.17\\ 
-incapdns.net& 64.86  & 7.61&4.81\\
- netdna-cdn.com& 21.08  & 55.04&23.39\\ 
-ourwebpic.com& 86.56  & 11.58&1.84\\
- us-east-1.elb.amazonaws.com& 88.99  & 6.18&4.73\\ 
-wpengine.com& 80.67  & 12.42&6.84\\
- us-west-2.elb.amazonaws.com&85.30  & 8.15&6.47\\ 
-windows.net& 80.52  & 12.99&6.41\\
- yunjiasu-cdn.net& 87.76  & 9.86&0.0\\ 
+ 1&1& 1295505\\
+ 2&3& 149042\\
+ 3&3015&1386\\
+ 4&1&597533\\
+  5&8&72584\\
+   6&1& 240910\\
+   7&130&13642\\
+    8&34&16735\\
+     9&1&199109\\
+      10&11&40648\\
  \hline
 \end{tabular}
-\newline
+\caption{k-means clustering}
+\label{tab:top10}
+\end{table}
 
-The table shows all 26 hyper giants and the percentage of text,image and application web objects delivered by them.We can see from table than most of the hyper giants deliver very high percentage of text files which contain text/html,text/css etc.But their are few exceptions .Like both the cloudfront SLDs are providing very high number of images compare to other hyper giants.  Similar kind of observation can be seen for netdna-cdn which provides more image files than text files.
+\noindent As observed from Table \ref{tab:top10}, the number of hosting infrastructures inside clusters 1, 2, 4, 5, 6, 9 and 10 are very sparsely distributed, while in clusters 3,7 and 8, the hosting infrastructure is very densely distributed. Thus the clusters 1, 2, 4, 5, 6, 9, 10  can be treated separately from the other clusters owing to the fact that their hosting infrastructure distribution in these two groups are completely different.\\
 
-From last section we observed yunjiasu-cdn.net,jiashule.com, us-east-1.elb.amazonaws.com
- are highly distributed CDNs.It can be observed that all the three CDNs are delivering very high number of text files compare to image and application files.This might be because of their footprint all over the world and also have massively distributed CDNs.Hence they cache more of the HTML  files at edge servers to provide better performance.Similarly observation can be seen from  distributed CDNs .These CDNs also deliver high number of HTML files compare to image files but as they have presence in some regions the number of HTML files are not that comparable to highly distributed CDNs.Third infrastructure type we observed was cloud computing infrastructures and netdns-cdn.com,cdntip.com clustered under that.From the table it can seen that  netdns-cdn.com delivers more images and very less number of HTML files.Again cdntip delivers highest number of application data.The data centers provide both images and HTML files in a  very balance way.cloud front delivers 49\% of HTML file and 41\% of image files.Similarly akamaiedge.net provide around 20\%  of images.Content providers like window.net and google.com delivers very high number of links compare to number of images.This is evident as they have more content . 
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=14cm]{/home/sakib/soumya/wholeSLD/geo/linkdensity.png}\\
+  \caption{link density per cluster}
+  \label{fig:hosting}
+\end{figure}
+
+\begin{table}[htb]
+\centering
+\begin{tabular}[t]{|p{.1\textwidth}||p{.6\textwidth}|}
+\hline
+ sl. no. &Hyper giants\\
+ \hline
+ 1&alikunlun.com \\
+2&d2t8dj4tr3q9od.cloudfront.net\\
+ 3&ap-northeast-1.elb.amazonaws.com\\
+ 4&ap-southeast-1.elb.amazonaws.com\\
+ 5&cdntip.com\\
+ 6&d5nxst8fruw4z.cloudfront.net\\
+ 7&eu-west-1.elb.amazonaws.com\\
+ 8&fastlylb\\
+ 9&google.com\\
+ 10&jiashule.com\\
+ 11&kxcdn.com\\
+12&pbwstatic.com\\ 
+ 13&akamaiedge.net\\ 
+ 14&anycast.me\\
+ 15&cloudflare.net\\
+ 16&cloudflare.com\\ 
+17&dynect.net\\
+ 18&edgecastcdn.net\\ 
+19&incapdns.net\\
+ 20&netdna-cdn.com\\ 
+21&ourwebpic.com\\
+ 22&us-east-1.elb.amazonaws.com\\ 
+23&wpengine.com\\
+ 24&us-west-2.elb.amazonaws.com\\ 
+25&windows.net\\
+ 26&yunjiasu-cdn.net\\ 
+ \hline
+\end{tabular}
+\caption{26 hyper giants}
+\label{tab:hypergiant}
+\end{table}
+\pagebreak
+
+\noindent Link density of a cluster can be defined as the average no of links of the cluster, which is obtained by diving the number of links hosted by cluster with the total number of hosting infrastructure in the cluster. Figure \ref{fig:hosting} shows the distribution of Link density for each cluster. X-axis of the graph shown in Figure 10 represents the cluster number, while the Y-axis represents the Link density of the cluster. \\
+
+\noindent From the graph show in Figure \ref{fig:hosting}, It is clear that clusters 1, 2, 4, 5, 6, 9,10 have relatively higher link densities compared to the other clusters. Hence these clusters can be grouped together, which here afterwards referred to as group-1, while the rest of the clusters 3,7,8 can be grouped together, and be called here afterwards as group-2.\\
+
+\noindent Since, we regrouped the total 10 clusters in 2 groups, it has to be analyzed further to identify which one of these two groups can be qualified as a hyper giant. This can evaluated by analyzing the link density of each group. Link density of a group can be calculated by summing the total number of links hosted by each cluster of the group and dividing this sum with total number of hosting infrastructure of the group. In this case, group-1 has 7 clusters, who has a cumulative total of  4088821 links and 26 hosting infrastructure. While in group-2, which has 3 clusters, has a cumulative total of  6959026 links and 3179 hosting infrastructure. Hence, the link density of the group-1 is 157262.36 (4088821/26), and for group-2 is 2189.06 (6959026/3179). From this, it is observed that their link densities are approximately in the ratio of 72:1, thus qualifying the members of group-1 to be called as hyper giants.\\
+
+\noindent 26 hosting infrastructure are concluded as hyper giants shown in Table \ref{tab:hypergiant}, which are collectively hosting 33,73\% of the total web links crawled.\\
 
 \subsubsection{Conclusion}
-From the section we can infer that both SLDs and hyper giants deliver maximum number of text/HTML files but it also found that hyper giants delivered almost 1.5 times more HTML files than SLDs.Same kind of observation can be seen for image files where SLDs deliver double the image content than hyper giants.Again we found that highly distributed CDN generally deliver more HTML links compare to image or application files which might be because of their massive CDN distribution.Distributed CDNs provide high number of HTML files because of their  presence in few regions.Cloud computing cdns provide more images than HTML file which might be because cloud computing provide scalability.Data centers delivers both HTML file and images in almost same ratio.Content providers also delivers more HTML files compare to image files which because of their rich content.
+\noindent From the above section,we are able to identify total 26 hyper giants when analyzed from a single vantage point in Germany. These hyper giants are collectively hosting 33,73\% of the total number of links crawled. As the study has considered 100,000 top ranked websites, it can concluded that these hyper giants are hosting approximately 33,73\% of Internet web traffic. \\
+
+\subsection{Popular websites dependency on hyper giants}
+\noindent Hyper giants build a large infrastructure all around the world to deliver content ensuring a faster response. The websites use these infrastructure to store their content, such as audios ,videos, test/html files etc. Therefore, any kind of disruption in serving these contents from hyper giants will impact the websites which shows the interdependency of hyper giants with the web sites.
+This section focuses on finding how hyper giants influence the delivery of web objects of Internet web traffic. \\
+ 
+\subsubsection{Cumulative object type distribution in hyper giants}
+\noindent The goal of this study is to analyze how hyper giants influence the delivery of web objects. Figure \ref{fig:Topobject} depicts the comparison between the number of web objects delivered by all the hosting infrastructure put together against the ones by hyper giants alone. The x-axis in the graph shows the type of web object delivered and the y-axis represents the number of web objects delivered. For better view, all the web object types are categorized into 4 major types. They are \enquote{text}, \enquote{image}, \enquote{application}, \enquote{other} types. The \enquote{text} object type contains different object types such as text/html, text/css etc. The \enquote{image} object contain objects such as image/png, image/jpeg etc. Similarly the \enquote{application} type object contains objects such as application/javascript, application/asp etc.
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=14cm]{/home/sakib/soumya/testObject/objectCompare.png}\\
+  \caption{top 10 object percentage used by all hyper giants}
+  \label{fig:Topobject}
+\end{figure}
+
+\noindent From the Figure \ref{fig:Topobject}, it can be observed that, out of total 12,120,731 links crawled from 100,000 top ranked web sites of Alexa, 9,750,438 are of \enquote{text} object type. 1,741,064 are of \enquote{image} type, 620,573 are of \enquote{application} type and 8656 are of \enquote{other} type while considering all hosting infrastructure. Similarly out of total 9,750,438 text objects, hyper giants are delivering 3,183,272 text objects which is 32,64 \%. Out of the total 1,741,064 image objects, 682,962 image objects delivered by hyper giants which is 39,22 \% of all image objects. For out of 620,573 application type application objects, hyper giants are delivering 219,801 application objects which is 35,41 \% of all application objects. Similarly for the category type \enquote{other}, hyper giants are delivering 2786 out of the total 8656 objects delivered through hosting infrastructure put together. When all the object types are put together, hyper giants host a total of  4,088,821 web objects, which is 33,73 \% of all the web objects hosted by all the infrastructure put together.
+
+\subsubsection{Individual object type distribution in hyper giants }
+\noindent In this section, different types of web objects delivered through the identified hyper giants are analyzed. In today's Internet ,content plays a vital role. Hence it is important to analyze what kind of data is delivered by each hyper giant.\\
+
+\begin{table}[htb]
+\centering
+\begin{tabular}[t]{|p{.4\textwidth}|p{.1\textwidth}||p{.1\textwidth}||p{.2\textwidth}||p{.1\textwidth}|}
+\hline
+ Country Name     & text&image&application&other\\
+ \hline
+dynect.net& 94.71& 3.76& 1.52& 0.01\\
+ap-northeast-1.elb.amazonaws.com& 90.09& 6.44& 3.43& 0.03\\
+cdntip.com& 89.55& 8.79& 1.66& 0.0\\
+yunjiasu-cdn.net& 89.07& 8.56& 2.36& 0.01\\
+jiashule.com& 88.89& 8.73& 2.38& 0.0\\
+eu-west-1.elb.amazonaws.com& 88.29& 6.76& 4.93& 0.02\\
+us-east-1.elb.amazonaws.com& 87.73& 7.19& 5.0& 0.08\\
+incapdns.net& 87.39& 7.74& 4.85& 0.02\\
+ap-southeast-1.elb.amazonaws.com& 86.74& 8.72& 4.43& 0.11\\
+ourwebpic.com& 85.37& 12.65& 1.98& 0.01\\
+pbwstatic.com& 84.46& 15.29& 0.25& 0.0\\
+us-west-2.elb.amazonaws.com& 84.21& 8.68& 7.04& 0.07\\
+wpengine.com& 81.15& 12.01& 6.79& 0.05\\
+windows.net& 80.1& 13.23& 6.39& 0.28\\
+anycast.me& 78.82& 15.91& 5.19& 0.08\\
+cloudflare.net& 78.63& 15.26& 6.05& 0.06\\
+alikunlun.com& 78.37& 18.54& 3.07& 0.02\\
+cloudflare.com& 76.34& 15.24& 8.39& 0.03\\
+kxcdn.com& 75.79& 17.9& 6.27& 0.05\\
+akamaiedge.net& 75.5& 18.63& 5.8& 0.07\\
+google.com& 75.07& 23.2& 1.72& 0.01\\
+fastlylb.net& 69.02& 22.43& 8.4& 0.14\\
+d2t8dj4tr3q9od.cloudfront.net& 50.26& 41.64& 7.77& 0.33\\
+d5nxst8fruw4z.cloudfront.net& 32.83& 57.3& 9.43& 0.44\\
+netdna-cdn.com& 19.44& 59.04& 21.14& 0.37\\
+ \hline
+\end{tabular}
+\caption{web object distribution for hyper giants}
+\label{tab:hyperObject}
+\end{table}
+
+\noindent Table \ref{tab:hyperObject} shows the list of all the 26 hyper giants and their corresponding object distribution in terms of the percentage of the total web objects they serve. It can be observed from table that most of the hyper giants deliver very high percentage of text files which contain text/html,text/css etc. But there are few exceptions, such as the hosting infrastructure \enquote{netdna-cdn.com}, \enquote{d5nxst8fruw4z.cloudfront.net} and \enquote{netdna-cdn.com} are providing very high number of images compare to other hyper giants.In comparison to other hyper giants, it can be observed that \enquote{netdna-cdn.com} host highest number of "application" type of objects.\\
+
+ \subsubsection{Conclusion}
+\noindent From the section, it can be inferred that the percentage of \enquote{text}, \enquote{image}, \enquote{application}, \enquote{other} are almost percentage wise align with the overall percentage of web object delivered through hyper giant compare to web object delivered through all the hosting infrastructure which is 33,73 \%. For object distribution, most of the hyper giants deliver more text files compare to other types of objects, except for \enquote{d5nxst8fruw4z.cloudfront.net} and \enquote{netdna-cdn.com} who delivers more image type of objects.
+\clearpage
